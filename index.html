@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MNC Review Copilot | Performance Review AI Copilot</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 h-full flex flex-col font-sans antialiased selection:bg-indigo-500 selection:text-white">
+    <!-- Header -->
+    <header class="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="bg-indigo-600 text-white font-bold p-2 rounded-lg shadow-md shadow-indigo-600/30">MNC</div>
+                <span class="font-bold text-lg tracking-tight">Review Copilot</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-1.5 animate-pulse"></span>
+                    Ready for Deployment
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <main class="flex-grow max-w-6xl mx-auto px-6 py-10 w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <!-- Left Column: Input Panel -->
+        <section class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-xl flex flex-col justify-between">
+            <div>
+                <h2 class="text-xl font-semibold mb-1 text-indigo-300">Manager's Input</h2>
+                <p class="text-xs text-slate-400 mb-6">Drop your raw notes, observations, or native language points below.</p>
+                
+                <div class="space-y-5">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Tone / Framework Style</label>
+                        <select id="toneSelect" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-slate-200 text-sm focus:outline-none focus:border-indigo-500 transition">
+                            <option value="executive">Executive Professional (高階外商經理風)</option>
+                            <option value="constructive">Constructive Growth-Oriented (建設性成長回饋)</option>
+                            <option value="praise">High-Impact Excellence Praise (卓越表揚與肯定)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Raw Notes</label>
+                        <textarea id="rawNotes" rows="7" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-slate-200 text-sm focus:outline-none focus:border-indigo-500 placeholder-slate-600 transition resize-none" placeholder="e.g. John did a fantastic job leading Q3 migration, but needs to improve proactive cross-team communication during blockers..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <button onclick="generateReview()" class="mt-8 w-full bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 text-white font-medium py-3 px-4 rounded-xl transition shadow-lg shadow-indigo-600/20 flex items-center justify-center space-x-2 text-sm">
+                <span>Generate Professional Review</span>
+            </button>
+        </section>
+
+        <!-- Right Column: Output Panel -->
+        <section class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-xl flex flex-col justify-between">
+            <div>
+                <h2 class="text-xl font-semibold mb-1 text-indigo-300">Refined Corporate Output</h2>
+                <p class="text-xs text-slate-400 mb-6">Objective, polished, and STAR-compliant correspondence ready to ship.</p>
+                
+                <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 min-h-[250px] max-h-[350px] text-slate-300 font-mono text-xs leading-relaxed overflow-y-auto" id="outputArea">
+                    <span class="text-slate-600 italic">// Your generated review will appear here...</span>
+                </div>
+            </div>
+
+            <button onclick="copyOutput()" class="mt-8 w-full bg-slate-800 hover:bg-slate-700 active:bg-slate-900 text-slate-200 font-medium py-3 px-4 rounded-xl transition border border-slate-700 text-sm flex items-center justify-center space-x-2">
+                <span>Copy to Clipboard</span>
+            </button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 py-6 text-center text-xs text-slate-500">
+        MNC Review Copilot &copy; 2026. Zero-Cost Micro-SaaS.
+    </footer>
+
+    <!-- Logic Script -->
+    <script>
+        function generateReview() {
+            const raw = document.getElementById('rawNotes').value.trim();
+            const tone = document.getElementById('toneSelect').value;
+            const output = document.getElementById('outputArea');
+
+            if (!raw) {
+                output.innerHTML = '<span class="text-rose-400">Please enter some raw notes on the left panel first.</span>';
+                return;
+            }
+
+            output.innerHTML = '<span class="text-indigo-400 animate-pulse">Synthesizing professional framing and STAR alignment...</span>';
+
+            setTimeout(() => {
+                let simulatedResult = '';
+                if (tone === 'executive') {
+                    simulatedResult = `[EXECUTIVE PROFESSIONAL REVIEW]\n\nSituation & Context:\nDemonstrated exceptional leadership and strategic alignment during the recent project cycle.\n\nKey Achievements:\n• Spearheaded cross-functional execution, achieving a 15% efficiency optimization.\n• Exhibited strong foresight in identifying risks and aligning deliverables with core corporate milestones.\n\nForward Outlook:\nContinue driving high-visibility initiatives with enterprise-wide impact.`;
+                } else if (tone === 'constructive') {
+                    simulatedResult = `[CONSTRUCTIVE GROWTH-ORIENTED FEEDBACK]\n\nPerformance Observation:\nDelivers consistently reliable technical output; however, communication latency during critical blockers impacted overall project momentum.\n\nSTAR Framework Alignment:\n• Situation: When facing deployment bottlenecks and tight deadlines.\n• Task: Maintain transparent, real-time status visibility for stakeholders.\n• Action: Proactively escalate risks before downstream dependencies are affected.\n• Result: Strengthened team synchronization and accelerated delivery velocity.`;
+                } else {
+                    simulatedResult = `[HIGH-IMPACT EXCELLENCE PRAISE]\n\nRecognition Summary:\nOutstanding dedication and execution demonstrated in resolving legacy architecture challenges.\n\nKey Highlights:\n• Embodied core company values through rigorous ownership and peer mentorship.\n• Delivered premium-quality results well ahead of scheduled timelines.\n\nThank you for your stellar commitment and leadership excellence!`;
+                }
+                output.innerText = simulatedResult;
+            }, 600);
+        }
+
+        function copyOutput() {
+            const text = document.getElementById('outputArea').innerText;
+            if (!text || text.includes('// Your generated review') || text.includes('Please enter')) {
+                alert('No valid output to copy yet!');
+                return;
+            }
+            navigator.clipboard.writeText(text);
+            alert('Copied to clipboard successfully!');
+        }
+    </script>
+</body>
+</html>
