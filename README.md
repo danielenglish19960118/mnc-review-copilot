@@ -32,7 +32,9 @@ AI-powered performance review assistant for MNC managers.
 1. Clone or fork this repository.
 2. Ensure you have the single **`index.html`** file in your root directory.
 3. Deploy directly to **Vercel** or any static hosting provider with the Framework Preset set to **Other**.
-
+<a href="https://smollaunch.com" target="_blank" rel="noopener">
+  <img src="https://smollaunch.com/badges/featured.svg" alt="MNC Review Copilot — Featured on Smol Launch" loading="lazy" width="250" height="60" />
+</a>
 ---
 
 ## 📄 License
