@@ -35,6 +35,9 @@ AI-powered performance review assistant for MNC managers.
 <a href="https://smollaunch.com" target="_blank" rel="noopener">
   <img src="https://smollaunch.com/badges/featured.svg" alt="MNC Review Copilot — Featured on Smol Launch" loading="lazy" width="250" height="60" />
 </a>
+<a href="https://launchigniter.com/product/mnc-review-copilot?ref=badge-mnc-review-copilot" target="_blank">
+  <img src="https://launchigniter.com/api/badge/mnc-review-copilot?theme=light" alt="Featured on LaunchIgniter" width="212" height="55" />
+</a>
 ---
 
 ## 📄 License
