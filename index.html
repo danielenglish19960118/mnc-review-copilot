@@ -18,16 +18,16 @@
 <body class="bg-slate-950 text-slate-100 h-full flex flex-col font-sans antialiased selection:bg-indigo-500 selection:text-white relative">
 
     <!-- ================= AUTHENTICATION OVERLAY / LOGIN MODAL ================= -->
-    <div id="authOverlay" class="fixed inset-0 z-[100] bg-slate-950/95 backdrop-blur-xl flex items-center justify-center p-4 md:p-8 overflow-y-auto transition-all duration-300">
-        <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-5xl w-full grid grid-cols-1 lg:grid-cols-12 overflow-hidden shadow-2xl shadow-indigo-500/10 relative my-auto">
+    <div id="authOverlay" class="fixed inset-0 z-[100] bg-slate-950/95 backdrop-blur-xl flex items-center justify-center p-4 md:p-8 overflow-y-auto transition-all duration-300 pointer-events-auto">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-5xl w-full max-h-[90vh] overflow-y-auto grid grid-cols-1 lg:grid-cols-12 shadow-2xl shadow-indigo-500/10 relative my-auto pointer-events-auto">
             
             <!-- Glow Effect Decorative Backgrounds -->
             <div class="absolute top-0 left-0 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none"></div>
             <div class="absolute bottom-0 right-0 w-96 h-96 bg-violet-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
             <!-- LEFT COLUMN: Product Feature Showcase & Details -->
-            <div class="lg:col-span-6 p-8 lg:p-10 bg-slate-950/60 border-b lg:border-b-0 lg:border-r border-slate-800/80 flex flex-col justify-between relative z-10 space-y-8">
-                <div class="space-y-6">
+            <div class="lg:col-span-6 p-6 md:p-8 lg:p-10 bg-slate-950/60 border-b lg:border-b-0 lg:border-r border-slate-800/80 flex flex-col justify-between relative z-10 space-y-6">
+                <div class="space-y-5">
                     <!-- Header Badge & Title -->
                     <div class="space-y-3">
                         <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-medium">
@@ -43,15 +43,15 @@
                     </div>
 
                     <!-- Core Feature List -->
-                    <div class="space-y-4">
+                    <div class="space-y-3">
                         <h2 class="text-xs uppercase tracking-wider text-indigo-400 font-bold flex items-center space-x-2">
                             <i class="fa-solid fa-star text-[10px]"></i>
                             <span>Key Product Capabilities</span>
                         </h2>
 
-                        <div class="space-y-3 text-xs">
+                        <div class="space-y-2.5 text-xs">
                             <!-- Feature 1 -->
-                            <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-3.5 space-y-1">
+                            <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-3 space-y-1">
                                 <div class="font-semibold text-slate-200 flex items-center space-x-2">
                                     <i class="fa-solid fa-bolt text-amber-400"></i>
                                     <span>Zero-Friction Architecture</span>
@@ -60,7 +60,7 @@
                             </div>
 
                             <!-- Feature 2 -->
-                            <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-3.5 space-y-2">
+                            <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-3 space-y-1.5">
                                 <div class="font-semibold text-slate-200 flex items-center space-x-2">
                                     <i class="fa-solid fa-sliders text-indigo-400"></i>
                                     <span>Multi-Tone Professional Frameworks</span>
@@ -73,7 +73,7 @@
                             </div>
 
                             <!-- Feature 3 -->
-                            <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-3.5 space-y-1">
+                            <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-3 space-y-1">
                                 <div class="font-semibold text-slate-200 flex items-center space-x-2">
                                     <i class="fa-solid fa-diagram-project text-emerald-400"></i>
                                     <span>STAR Methodology Alignment</span>
@@ -104,9 +104,9 @@
             </div>
 
             <!-- RIGHT COLUMN: Authentication & Verification Workflow -->
-            <div class="lg:col-span-6 p-8 lg:p-10 flex flex-col justify-center relative z-10 space-y-6">
+            <div class="lg:col-span-6 p-6 md:p-8 lg:p-10 flex flex-col justify-center relative z-20 pointer-events-auto space-y-5">
                 <!-- Top Brand Header -->
-                <div class="flex items-center space-x-3 mb-2">
+                <div class="flex items-center space-x-3 mb-1">
                     <div class="bg-gradient-to-tr from-indigo-600 to-violet-600 text-white font-bold p-3 rounded-xl shadow-lg shadow-indigo-600/30 flex items-center justify-center">
                         <i class="fa-solid fa-network-wired text-lg"></i>
                     </div>
@@ -117,9 +117,9 @@
                 </div>
 
                 <!-- Auth Mode Switcher Tabs -->
-                <div id="authTabsHeader" class="flex bg-slate-950 p-1 rounded-xl border border-slate-800">
-                    <button id="authTabLogin" onclick="switchAuthMode('login')" class="flex-1 py-2 text-xs font-semibold rounded-lg bg-indigo-600 text-white transition shadow">Sign In</button>
-                    <button id="authTabRegister" onclick="switchAuthMode('register')" class="flex-1 py-2 text-xs font-semibold rounded-lg text-slate-400 hover:text-slate-200 transition">Create Account</button>
+                <div id="authTabsHeader" class="flex bg-slate-950 p-1 rounded-xl border border-slate-800 relative z-30 pointer-events-auto">
+                    <button type="button" id="authTabLogin" onclick="switchAuthMode('login')" class="flex-1 py-2 text-xs font-semibold rounded-lg bg-indigo-600 text-white transition shadow cursor-pointer">Sign In</button>
+                    <button type="button" id="authTabRegister" onclick="switchAuthMode('register')" class="flex-1 py-2 text-xs font-semibold rounded-lg text-slate-400 hover:text-slate-200 transition cursor-pointer">Create Account</button>
                 </div>
 
                 <!-- Alert Box for Auth Messages -->
@@ -131,7 +131,7 @@
                         <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Work Email or Username</label>
                         <div class="relative">
                             <i class="fa-solid fa-envelope absolute left-3.5 top-3 text-slate-500 text-xs"></i>
-                            <input type="text" id="loginIdentifier" required placeholder="admin@mnc-enterprise.com" value="admin@mnc-enterprise.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-3 py-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500 transition">
+                            <input type="text" id="loginIdentifier" required placeholder="admin@mnc-enterprise.com" value="admin@mnc-enterprise.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-3 py-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500 transition relative z-20 pointer-events-auto">
                         </div>
                     </div>
 
@@ -139,7 +139,7 @@
                         <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Password</label>
                         <div class="relative">
                             <i class="fa-solid fa-lock absolute left-3.5 top-3 text-slate-500 text-xs"></i>
-                            <input type="password" id="loginPassword" required placeholder="password123" value="password123" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-3 py-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500 transition">
+                            <input type="password" id="loginPassword" required placeholder="password123" value="password123" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-3 py-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500 transition relative z-20 pointer-events-auto">
                         </div>
                     </div>
 
@@ -148,10 +148,10 @@
                             <input type="checkbox" id="rememberMe" checked class="rounded border-slate-800 bg-slate-950 text-indigo-600 focus:ring-0">
                             <span>Remember session</span>
                         </label>
-                        <a href="#" onclick="switchAuthMode('forgot'); return false;" class="text-indigo-400 hover:underline">Forgot Password?</a>
+                        <button type="button" onclick="switchAuthMode('forgot')" class="text-indigo-400 hover:underline cursor-pointer bg-transparent border-0 p-0 text-xs">Forgot Password?</button>
                     </div>
 
-                    <button type="submit" class="w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-medium py-3 rounded-xl transition shadow-lg shadow-indigo-600/20 text-xs cursor-pointer flex items-center justify-center space-x-2">
+                    <button type="submit" class="w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-medium py-3 rounded-xl transition shadow-lg shadow-indigo-600/20 text-xs cursor-pointer flex items-center justify-center space-x-2 relative z-20 pointer-events-auto">
                         <i class="fa-solid fa-right-to-bracket"></i>
                         <span>Authenticate Portal Access</span>
                     </button>
@@ -173,7 +173,7 @@
                         <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Full Name</label>
                         <div class="relative">
                             <i class="fa-solid fa-id-card absolute left-3.5 top-3 text-slate-500 text-xs"></i>
-                            <input type="text" id="regFullName" required placeholder="Alex Morgan" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-3 py-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500 transition">
+                            <input type="text" id="regFullName" required placeholder="Alex Morgan" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-3 py-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500 transition relative z-20 pointer-events-auto">
                         </div>
                     </div>
 
@@ -181,7 +181,7 @@
                         <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Corporate Work Email (Required for Verification)</label>
                         <div class="relative">
                             <i class="fa-solid fa-envelope absolute left-3.5 top-3 text-slate-500 text-xs"></i>
-                            <input type="email" id="regEmail" required placeholder="alex.morgan@mnc-enterprise.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-3 py-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500 transition">
+                            <input type="email" id="regEmail" required placeholder="alex.morgan@mnc-enterprise.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-3 py-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500 transition relative z-20 pointer-events-auto">
                         </div>
                     </div>
 
@@ -189,11 +189,11 @@
                         <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Password</label>
                         <div class="relative">
                             <i class="fa-solid fa-lock absolute left-3.5 top-3 text-slate-500 text-xs"></i>
-                            <input type="password" id="regPassword" required placeholder="Minimum 6 characters" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-3 py-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500 transition">
+                            <input type="password" id="regPassword" required placeholder="Minimum 6 characters" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-3 py-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500 transition relative z-20 pointer-events-auto">
                         </div>
                     </div>
 
-                    <button type="submit" class="w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-medium py-3 rounded-xl transition shadow-lg shadow-indigo-600/20 text-xs cursor-pointer flex items-center justify-center space-x-2">
+                    <button type="submit" class="w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-medium py-3 rounded-xl transition shadow-lg shadow-indigo-600/20 text-xs cursor-pointer flex items-center justify-center space-x-2 relative z-20 pointer-events-auto">
                         <i class="fa-solid fa-user-plus"></i>
                         <span>Register & Send Verification Code</span>
                     </button>
@@ -220,15 +220,15 @@
 
                     <div>
                         <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Enter 6-Digit Verification Code (OTP)</label>
-                        <input type="text" id="otpInputCode" maxlength="6" placeholder="123456" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-center tracking-widest text-lg font-mono text-indigo-300 focus:outline-none focus:border-indigo-500 transition">
+                        <input type="text" id="otpInputCode" maxlength="6" placeholder="123456" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-center tracking-widest text-lg font-mono text-indigo-300 focus:outline-none focus:border-indigo-500 transition relative z-20 pointer-events-auto">
                     </div>
 
                     <div class="flex space-x-3">
-                        <button type="button" onclick="verifyOtpCode()" class="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white py-3 rounded-xl text-xs font-semibold transition">Verify & Complete Signup</button>
-                        <button type="button" onclick="resendOtpCode()" class="px-4 bg-slate-800 hover:bg-slate-700 text-slate-300 py-3 rounded-xl text-xs font-medium transition" title="Resend OTP">Resend</button>
+                        <button type="button" onclick="verifyOtpCode()" class="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white py-3 rounded-xl text-xs font-semibold transition cursor-pointer relative z-20 pointer-events-auto">Verify & Complete Signup</button>
+                        <button type="button" onclick="resendOtpCode()" class="px-4 bg-slate-800 hover:bg-slate-700 text-slate-300 py-3 rounded-xl text-xs font-medium transition cursor-pointer relative z-20 pointer-events-auto" title="Resend OTP">Resend</button>
                     </div>
                     <div class="text-center">
-                        <button type="button" onclick="switchAuthMode('login')" class="text-xs text-slate-400 hover:text-slate-200 underline">← Back to Sign In</button>
+                        <button type="button" onclick="switchAuthMode('login')" class="text-xs text-slate-400 hover:text-slate-200 underline cursor-pointer">← Back to Sign In</button>
                     </div>
                 </div>
 
@@ -243,13 +243,13 @@
                         <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Registered Work Email</label>
                         <div class="relative">
                             <i class="fa-solid fa-envelope absolute left-3.5 top-3 text-slate-500 text-xs"></i>
-                            <input type="email" id="forgotEmail" required placeholder="admin@mnc-enterprise.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-3 py-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500 transition">
+                            <input type="email" id="forgotEmail" required placeholder="admin@mnc-enterprise.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-3 py-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500 transition relative z-20 pointer-events-auto">
                         </div>
                     </div>
 
-                    <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-medium py-3 rounded-xl transition text-xs">Send Reset Code</button>
+                    <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-medium py-3 rounded-xl transition text-xs cursor-pointer relative z-20 pointer-events-auto">Send Reset Code</button>
                     <div class="text-center">
-                        <button type="button" onclick="switchAuthMode('login')" class="text-xs text-slate-400 hover:text-slate-200 underline">← Return to Sign In</button>
+                        <button type="button" onclick="switchAuthMode('login')" class="text-xs text-slate-400 hover:text-slate-200 underline cursor-pointer">← Return to Sign In</button>
                     </div>
                 </form>
             </div>
