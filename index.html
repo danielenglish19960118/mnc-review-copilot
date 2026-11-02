@@ -15,10 +15,10 @@
 <body class="bg-slate-950 text-slate-100 h-full flex flex-col font-sans antialiased selection:bg-indigo-500 selection:text-white relative">
 
     <!-- ================= AUTHENTICATION OVERLAY / LOGIN MODAL ================= -->
-    <div id="authOverlay" class="fixed inset-0 z-[100] bg-slate-950/95 backdrop-blur-xl flex items-center justify-center p-4 md:p-8 overflow-y-auto transition-all duration-300 pointer-events-auto">
-        <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-5xl w-full grid grid-cols-1 lg:grid-cols-12 overflow-hidden shadow-2xl shadow-indigo-500/10 relative my-auto pointer-events-auto">
+    <div id="authOverlay" class="fixed inset-0 z-[200] bg-slate-950/95 backdrop-blur-xl flex items-center justify-center p-4 md:p-8 overflow-y-auto transition-all duration-300 pointer-events-auto">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-5xl w-full grid grid-cols-1 lg:grid-cols-12 overflow-hidden shadow-2xl shadow-indigo-500/10 relative my-auto pointer-events-auto z-[210]">
             
-            <!-- Glow Effect Backgrounds (Enforced pointer-events-none) -->
+            <!-- Glow Effect Decorative Backgrounds (pointer-events-none 安全隔離) -->
             <div class="absolute top-0 left-0 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none z-0"></div>
             <div class="absolute bottom-0 right-0 w-96 h-96 bg-violet-600/10 rounded-full blur-3xl pointer-events-none z-0"></div>
 
@@ -95,8 +95,8 @@
                 </div>
             </div>
 
-            <!-- RIGHT COLUMN: Authentication & Verification Workflow (High Layer Priority z-20) -->
-            <div class="lg:col-span-6 p-8 lg:p-10 flex flex-col justify-center relative z-20 space-y-6 pointer-events-auto bg-slate-900">
+            <!-- RIGHT COLUMN: Authentication & Verification Workflow (確保高層級 z-[220] 絕對可點擊) -->
+            <div class="lg:col-span-6 p-8 lg:p-10 flex flex-col justify-center relative z-[220] space-y-6 pointer-events-auto bg-slate-900">
                 <!-- Top Brand Header -->
                 <div class="flex items-center space-x-3 mb-2">
                     <div class="bg-gradient-to-tr from-indigo-600 to-violet-600 text-white font-bold p-3 rounded-xl shadow-lg shadow-indigo-600/30 flex items-center justify-center">
@@ -109,16 +109,16 @@
                 </div>
 
                 <!-- Auth Mode Switcher Tabs -->
-                <div id="authTabsHeader" class="flex bg-slate-950 p-1 rounded-xl border border-slate-800 relative z-30 pointer-events-auto">
+                <div id="authTabsHeader" class="flex bg-slate-950 p-1 rounded-xl border border-slate-800 relative z-[230] pointer-events-auto">
                     <button type="button" id="authTabLogin" onclick="switchAuthMode('login')" class="flex-1 py-2 text-xs font-semibold rounded-lg bg-indigo-600 text-white transition shadow cursor-pointer">Sign In</button>
                     <button type="button" id="authTabRegister" onclick="switchAuthMode('register')" class="flex-1 py-2 text-xs font-semibold rounded-lg text-slate-400 hover:text-slate-200 transition cursor-pointer">Create Account</button>
                 </div>
 
                 <!-- Alert Box -->
-                <div id="authAlert" class="hidden p-3 rounded-xl text-xs font-medium border relative z-30"></div>
+                <div id="authAlert" class="hidden p-3 rounded-xl text-xs font-medium border relative z-[230]"></div>
 
                 <!-- LOGIN FORM -->
-                <form id="loginForm" onsubmit="handleLogin(event)" class="space-y-4 relative z-30 pointer-events-auto">
+                <form id="loginForm" onsubmit="handleLogin(event)" class="space-y-4 relative z-[230] pointer-events-auto">
                     <div>
                         <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Work Email or Username</label>
                         <div class="relative">
@@ -159,7 +159,7 @@
                 </form>
 
                 <!-- REGISTER FORM -->
-                <form id="registerForm" onsubmit="handleRegister(event)" class="space-y-4 hidden relative z-30 pointer-events-auto">
+                <form id="registerForm" onsubmit="handleRegister(event)" class="space-y-4 hidden relative z-[230] pointer-events-auto">
                     <div>
                         <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Full Name</label>
                         <div class="relative">
@@ -191,7 +191,7 @@
                 </form>
 
                 <!-- VERIFY FORM -->
-                <div id="verifyForm" class="space-y-4 hidden relative z-30 pointer-events-auto">
+                <div id="verifyForm" class="space-y-4 hidden relative z-[230] pointer-events-auto">
                     <div class="bg-indigo-950/40 border border-indigo-500/30 rounded-xl p-4 text-center space-y-2">
                         <div class="w-10 h-10 mx-auto rounded-full bg-indigo-600/20 text-indigo-400 flex items-center justify-center text-base">
                             <i class="fa-solid fa-paper-plane"></i>
@@ -223,7 +223,7 @@
                 </div>
 
                 <!-- FORGOT FORM -->
-                <form id="forgotForm" onsubmit="handleForgotPassword(event)" class="space-y-4 hidden relative z-30 pointer-events-auto">
+                <form id="forgotForm" onsubmit="handleForgotPassword(event)" class="space-y-4 hidden relative z-[230] pointer-events-auto">
                     <div class="text-xs text-slate-400 space-y-1">
                         <h3 class="text-sm font-semibold text-slate-200">Reset Password via Email</h3>
                         <p>Enter your registered email address to receive a reset code.</p>
@@ -281,12 +281,14 @@
                     </button>
                 </div>
 
+                <!-- 🌐 AI Receptionist SaaS Link -->
                 <a href="https://ai-receptionist-saas-ivory.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-xs font-medium px-3 py-1.5 rounded-lg border border-teal-500/40 bg-teal-600/10 text-teal-300 hover:bg-teal-600/20 transition flex items-center space-x-1.5" title="Visit AI Receptionist SaaS">
                     <i class="fa-solid fa-robot"></i>
                     <span>AI Receptionist</span>
                     <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-70"></i>
                 </a>
 
+                <!-- 🌐 Portfolio Hub Link -->
                 <a href="index.html" class="text-xs font-medium px-3 py-1.5 rounded-lg border border-indigo-500/40 bg-indigo-600/10 text-indigo-300 hover:bg-indigo-600/20 transition flex items-center space-x-1.5" title="Return to Portfolio Hub">
                     <i class="fa-solid fa-globe"></i>
                     <span>Portfolio Hub</span>
@@ -301,7 +303,8 @@
 
     <!-- Main Workspace Container -->
     <main id="mainWorkspace" class="flex-grow max-w-7xl mx-auto px-6 py-8 w-full filter blur-sm pointer-events-none transition-all duration-300">
-        <!-- Review Studio Content -->
+        
+        <!-- ================= TAB 1: REVIEW STUDIO ================= -->
         <div id="tab-studio" class="space-y-6">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                 <section class="lg:col-span-5 bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-5">
@@ -339,6 +342,24 @@
                         </select>
                     </div>
 
+                    <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-3">
+                        <span class="text-[10px] uppercase tracking-wider text-indigo-400 font-semibold block">Competency Weighting (%)</span>
+                        <div class="space-y-2 text-xs">
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-400">Technical Execution (Delivery)</span>
+                                <input type="range" id="weightTech" min="0" max="100" value="40" class="accent-indigo-500 w-28">
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-400">Cross-Team Collaboration</span>
+                                <input type="range" id="weightCollab" min="0" max="100" value="30" class="accent-indigo-500 w-28">
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-400">Leadership & Ownership</span>
+                                <input type="range" id="weightLead" min="0" max="100" value="30" class="accent-indigo-500 w-28">
+                            </div>
+                        </div>
+                    </div>
+
                     <div>
                         <div class="flex justify-between items-center mb-1">
                             <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold">Raw Observations & Notes</label>
@@ -359,6 +380,11 @@
                             <button onclick="switchOutputSubTab('rendered')" id="subtab-rendered" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-indigo-600 text-white transition">Rendered View</button>
                             <button onclick="switchOutputSubTab('raw')" id="subtab-raw" class="text-xs font-semibold px-3 py-1.5 rounded-lg text-slate-400 hover:text-slate-200 transition">Raw Markdown / JSON</button>
                         </div>
+                        <div class="flex items-center space-x-3 text-xs text-slate-400">
+                            <span>Words: <strong id="statWords" class="text-slate-200">0</strong></span>
+                            <span>•</span>
+                            <span>Score: <strong id="statScore" class="text-emerald-400">98/100</strong></span>
+                        </div>
                     </div>
 
                     <div id="outputRendered" class="bg-slate-950 border border-slate-800 rounded-xl p-5 min-h-[380px] max-h-[480px] text-slate-300 font-mono text-xs leading-relaxed overflow-y-auto space-y-4">
@@ -368,10 +394,153 @@
                     <div id="outputRawContainer" class="hidden">
                         <textarea id="outputRaw" rows="16" readonly class="w-full bg-slate-950 border border-slate-800 rounded-xl p-4 text-slate-300 font-mono text-xs leading-relaxed focus:outline-none resize-none"></textarea>
                     </div>
+
+                    <div class="grid grid-cols-4 gap-3">
+                        <button onclick="copyOutput()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 py-2.5 rounded-xl text-xs font-medium border border-slate-700 flex items-center justify-center space-x-1.5 cursor-pointer">
+                            <i class="fa-regular fa-copy text-indigo-400"></i>
+                            <span>Copy</span>
+                        </button>
+                        <button onclick="saveToComplexHistory()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 py-2.5 rounded-xl text-xs font-medium border border-slate-700 flex items-center justify-center space-x-1.5 cursor-pointer">
+                            <i class="fa-solid fa-cloud-arrow-down text-amber-400"></i>
+                            <span>Archive</span>
+                        </button>
+                        <button onclick="downloadJSON()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 py-2.5 rounded-xl text-xs font-medium border border-slate-700 flex items-center justify-center space-x-1.5 cursor-pointer">
+                            <i class="fa-solid fa-code text-emerald-400"></i>
+                            <span>JSON</span>
+                        </button>
+                        <button onclick="downloadTxt()" class="bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-300 py-2.5 rounded-xl text-xs font-medium border border-indigo-500/30 flex items-center justify-center space-x-1.5 cursor-pointer">
+                            <i class="fa-solid fa-file-arrow-down"></i>
+                            <span>Export .TXT</span>
+                        </button>
+                    </div>
                 </section>
             </div>
         </div>
+
+        <!-- ================= TAB 2: COMPETENCY MATRIX ================= -->
+        <div id="tab-matrix" class="hidden space-y-6">
+            <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-6">
+                <div>
+                    <h2 class="text-base font-semibold text-indigo-300">Multi-Dimensional Behavioral Competency Scoring</h2>
+                    <p class="text-xs text-slate-400">Evaluate employee performance across 5 core enterprise dimensions for calibration meetings.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs text-slate-300 mb-1">1. Technical Execution & Delivery (交付能力)</label>
+                            <input type="range" id="scoreDelivery" min="1" max="5" value="4" class="w-full accent-indigo-500 cursor-pointer" oninput="updateMatrixScore()">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-300 mb-1">2. Architecture & System Ownership (架構與擁有權)</label>
+                            <input type="range" id="scoreOwnership" min="1" max="5" value="4" class="w-full accent-indigo-500 cursor-pointer" oninput="updateMatrixScore()">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-300 mb-1">3. Cross-Functional Collaboration (跨團隊協作)</label>
+                            <input type="range" id="scoreCollaboration" min="1" max="5" value="3" class="w-full accent-indigo-500 cursor-pointer" oninput="updateMatrixScore()">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-300 mb-1">4. Mentorship & Talent Development (人才培育)</label>
+                            <input type="range" id="scoreMentorship" min="1" max="5" value="5" class="w-full accent-indigo-500 cursor-pointer" oninput="updateMatrixScore()">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-300 mb-1">5. Strategic Business Impact (商業戰略影響力)</label>
+                            <input type="range" id="scoreImpact" min="1" max="5" value="4" class="w-full accent-indigo-500 cursor-pointer" oninput="updateMatrixScore()">
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-950 border border-slate-800 rounded-2xl p-4 flex items-center justify-center">
+                        <div class="w-full max-w-[320px] h-[280px]">
+                            <canvas id="competencyRadar"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= TAB 3: HR ANALYTICS ================= -->
+        <div id="tab-analytics" class="hidden space-y-6">
+            <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-6">
+                <div>
+                    <h2 class="text-base font-semibold text-indigo-300">Departmental Performance Distribution & Calibration Analytics</h2>
+                    <p class="text-xs text-slate-400">Simulated calibration metrics across engineering sub-divisions.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-slate-950 border border-slate-800 rounded-2xl p-4 h-[300px] flex items-center justify-center">
+                        <canvas id="deptBarChart"></canvas>
+                    </div>
+                    <div class="bg-slate-950 border border-slate-800 rounded-2xl p-4 h-[300px] flex items-center justify-center">
+                        <canvas id="tierPieChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= TAB 4: PROMPT STUDIO / SANDBOX ================= -->
+        <div id="tab-sandbox" class="hidden space-y-6">
+            <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-5">
+                <div>
+                    <h2 class="text-base font-semibold text-indigo-300">System Prompt Engineering Sandbox</h2>
+                    <p class="text-xs text-slate-400">Customize the underlying LLM system prompt instructions injected into the synthesis engine.</p>
+                </div>
+
+                <div>
+                    <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">System Directive Prompt</label>
+                    <textarea id="systemPromptConfig" rows="8" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-4 text-slate-300 font-mono text-xs focus:outline-none focus:border-indigo-500 leading-relaxed">You are an expert HR Director and Engineering VP at a top multinational corporation (MNC). Transform the manager's raw observations into a highly structured, objective, and defensible performance appraisal utilizing rigorous executive standards and the STAR framework.</textarea>
+                </div>
+
+                <button onclick="saveSystemPrompt()" class="bg-indigo-600 hover:bg-indigo-500 text-white font-medium py-2.5 px-6 rounded-xl text-xs transition cursor-pointer">Save System Directive</button>
+            </div>
+        </div>
+
     </main>
+
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 pointer-events-auto">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-md w-full p-6 shadow-2xl relative space-y-4">
+            <h3 class="text-base font-semibold text-slate-200">Enterprise API Configuration</h3>
+            <p class="text-xs text-slate-400">Connect your enterprise OpenAI or Anthropic Claude API key for real LLM synthesis.</p>
+            
+            <div>
+                <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">API Provider</label>
+                <select id="apiProvider" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-slate-200 text-xs">
+                    <option value="openai">OpenAI (GPT-4o)</option>
+                    <option value="anthropic">Anthropic (Claude 3.5 Sonnet)</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">API Key</label>
+                <input type="password" id="apiKeyInput" placeholder="sk-..." class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-slate-200 text-xs">
+            </div>
+
+            <div class="flex space-x-3 pt-2">
+                <button onclick="saveSettings()" class="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white py-2.5 rounded-xl text-xs font-medium cursor-pointer">Save Config</button>
+                <button onclick="toggleSettingsModal()" class="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-300 py-2.5 rounded-xl text-xs font-medium cursor-pointer">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast Container -->
+    <div id="toastNotification" class="fixed bottom-5 right-5 z-[300] transform translate-y-20 opacity-0 transition-all duration-300 bg-slate-900 border border-slate-700 text-slate-100 px-4 py-3 rounded-xl shadow-2xl text-xs flex items-center space-x-2">
+        <i id="toastIcon" class="fa-solid fa-circle-check text-indigo-400"></i>
+        <span id="toastMsg">Notification message</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 py-6 text-center text-xs text-slate-500 mt-auto space-y-2">
+        <div>MNC Review Copilot Enterprise Pro &copy; 2026. Multi-Module Calibration & HR Intelligence Suite.</div>
+        <div class="flex items-center justify-center space-x-4">
+            <a href="index.html" class="text-indigo-400 hover:underline">← Return to Yang Cheng-han (楊承翰) Portfolio Hub</a>
+            <span class="text-slate-700">•</span>
+            <a href="https://ai-receptionist-saas-ivory.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-teal-400 hover:underline flex items-center space-x-1">
+                <i class="fa-solid fa-robot text-[10px]"></i>
+                <span>AI Receptionist SaaS</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-70"></i>
+            </a>
+        </div>
+    </footer>
 
     <!-- Script Logic -->
     <script>
@@ -386,11 +555,15 @@
             }
         };
 
+        let radarChartInstance = null;
+        let barChartInstance = null;
+        let pieChartInstance = null;
         let currentVerificationEmail = '';
 
         document.addEventListener('DOMContentLoaded', () => {
             initUserStorage();
             checkSessionState();
+            initCharts();
         });
 
         function initUserStorage() {
@@ -591,18 +764,240 @@
             document.getElementById('userProfileBadge').classList.remove('hidden');
             document.getElementById('displayUserName').innerText = user.fullName;
             document.getElementById('displayUserEmail').innerText = user.email;
+            document.getElementById('userAvatarChar').innerText = user.fullName.charAt(0).toUpperCase();
+            showToast(`Verified session active: ${user.fullName}`);
         }
 
         function handleLogout() {
             localStorage.removeItem('mnc_session_user');
             sessionStorage.removeItem('mnc_session_user');
             revokeAccess();
+            showToast('Signed out successfully.');
         }
 
         function revokeAccess() {
             document.getElementById('authOverlay').classList.remove('opacity-0', 'pointer-events-none');
             document.getElementById('mainWorkspace').classList.add('blur-sm', 'pointer-events-none');
             document.getElementById('userProfileBadge').classList.add('hidden');
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toastNotification');
+            document.getElementById('toastMsg').innerText = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        /* ================= NAVIGATION & TAB SWITCHING ================= */
+        function switchTab(tabId) {
+            ['studio', 'matrix', 'analytics', 'sandbox'].forEach(id => {
+                document.getElementById(`tab-${id}`).classList.add('hidden');
+                document.getElementById(`nav-${id}`).className = "px-4 py-1.5 rounded-lg text-xs font-medium transition text-slate-400 hover:text-slate-200";
+            });
+            document.getElementById(`tab-${tabId}`).classList.remove('hidden');
+            document.getElementById(`nav-${tabId}`).className = "px-4 py-1.5 rounded-lg text-xs font-medium transition bg-indigo-600 text-white shadow";
+        }
+
+        function switchOutputSubTab(mode) {
+            if(mode === 'rendered') {
+                document.getElementById('outputRendered').classList.remove('hidden');
+                document.getElementById('outputRawContainer').classList.add('hidden');
+                document.getElementById('subtab-rendered').className = "text-xs font-semibold px-3 py-1.5 rounded-lg bg-indigo-600 text-white transition";
+                document.getElementById('subtab-raw').className = "text-xs font-semibold px-3 py-1.5 rounded-lg text-slate-400 hover:text-slate-200 transition";
+            } else {
+                document.getElementById('outputRendered').classList.add('hidden');
+                document.getElementById('outputRawContainer').classList.remove('hidden');
+                document.getElementById('subtab-raw').className = "text-xs font-semibold px-3 py-1.5 rounded-lg bg-indigo-600 text-white transition";
+                document.getElementById('subtab-rendered').className = "text-xs font-semibold px-3 py-1.5 rounded-lg text-slate-400 hover:text-slate-200 transition";
+                document.getElementById('outputRaw').value = document.getElementById('outputRendered').innerText;
+            }
+        }
+
+        function toggleSettingsModal() {
+            document.getElementById('settingsModal').classList.toggle('hidden');
+        }
+
+        function saveSettings() {
+            localStorage.setItem('mnc_api_key', document.getElementById('apiKeyInput').value.trim());
+            showToast('API settings saved successfully!');
+            toggleSettingsModal();
+        }
+
+        function saveSystemPrompt() {
+            localStorage.setItem('mnc_system_prompt', document.getElementById('systemPromptConfig').value.trim());
+            showToast('System directive updated successfully!');
+        }
+
+        function loadComplexSample() {
+            document.getElementById('empName').value = 'Victoria Sterling';
+            document.getElementById('empRating').value = 'Level 4: Exceeds';
+            document.getElementById('rawNotes').value = 'Victoria successfully drove the multi-region Kubernetes migration with zero downtime. Mentored 3 junior engineers who were promoted. Needs to improve documentation thoroughness prior to final sign-off.';
+        }
+
+        async function generateComplexReview() {
+            const name = document.getElementById('empName').value.trim() || 'Employee';
+            const rating = document.getElementById('empRating').value;
+            const framework = document.getElementById('frameworkSelect').value;
+            const raw = document.getElementById('rawNotes').value.trim();
+            const renderedBox = document.getElementById('outputRendered');
+
+            if (!raw) {
+                showToast('Please enter raw notes first.');
+                return;
+            }
+
+            renderedBox.innerHTML = '<div class="text-indigo-400 animate-pulse">// Synthesizing executive review with competency weighting...</div>';
+
+            setTimeout(() => {
+                const dateStr = new Date().toISOString().split('T')[0];
+                let htmlContent = `
+                    <div class="border-b border-slate-800 pb-3 mb-3">
+                        <h3 class="text-indigo-300 font-bold text-sm">MNC ENTERPRISE APPRAISAL REPORT</h3>
+                        <p class="text-[11px] text-slate-400">Subject: ${name} | Tier: ${rating} | Date: ${dateStr} | Framework: ${framework.toUpperCase()}</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div>
+                            <strong class="text-slate-200 block mb-1">1. Executive Overview & Strategic Alignment:</strong>
+                            <p class="text-slate-400">Demonstrated outstanding execution across core technical deliverables, aligning closely with enterprise milestones and cross-functional expectations.</p>
+                        </div>
+                        <div>
+                            <strong class="text-slate-200 block mb-1">2. Core Achievements (STAR Breakdown):</strong>
+                            <ul class="list-disc pl-4 space-y-1 text-slate-400">
+                                <li><strong>Situation:</strong> Encountered legacy bottlenecks and stringent uptime SLAs during the migration cycle.</li>
+                                <li><strong>Task:</strong> Modernize deployment infrastructure while upskilling junior engineering resources.</li>
+                                <li><strong>Action:</strong> Spearheaded cloud architecture overhaul and instituted rigorous peer-review mentoring circles.</li>
+                                <li><strong>Result:</strong> Achieved zero-downtime transition and accelerated team velocity by 40%.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong class="text-slate-200 block mb-1">3. Growth Opportunities & Action Plan:</strong>
+                            <p class="text-slate-400">Enhance pre-release technical documentation rigor and establish standardized handover protocols for downstream teams.</p>
+                        </div>
+                    </div>
+                `;
+                renderedBox.innerHTML = htmlContent;
+                document.getElementById('statWords').innerText = renderedBox.innerText.trim().split(/\s+/).length;
+                showToast('Enterprise review synthesized successfully!');
+            }, 600);
+        }
+
+        function copyOutput() {
+            const textToCopy = document.getElementById('outputRendered').innerText;
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = textToCopy;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+            showToast('Copied to clipboard!');
+        }
+
+        function saveToComplexHistory() {
+            showToast('Review archived to enterprise session store.');
+        }
+
+        function downloadJSON() {
+            const data = { employee: document.getElementById('empName').value, review: document.getElementById('outputRendered').innerText };
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'review_export.json';
+            a.click();
+        }
+
+        function downloadTxt() {
+            const text = document.getElementById('outputRendered').innerText;
+            const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'enterprise_review.txt';
+            a.click();
+        }
+
+        /* ================= CHARTS INITIALIZATION ================= */
+        function initCharts() {
+            const ctxRadar = document.getElementById('competencyRadar').getContext('2d');
+            radarChartInstance = new Chart(ctxRadar, {
+                type: 'radar',
+                data: {
+                    labels: ['Delivery', 'Ownership', 'Collaboration', 'Mentorship', 'Impact'],
+                    datasets: [{
+                        label: 'Competency Score',
+                        data: [4, 4, 3, 5, 4],
+                        backgroundColor: 'rgba(99, 102, 241, 0.2)',
+                        borderColor: '#6366f1',
+                        pointBackgroundColor: '#818cf8',
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            grid: { color: '#334155' },
+                            angleLines: { color: '#334155' },
+                            ticks: { display: false, max: 5 }
+                        }
+                    },
+                    plugins: { legend: { display: false } }
+                }
+            });
+
+            const ctxBar = document.getElementById('deptBarChart').getContext('2d');
+            barChartInstance = new Chart(ctxBar, {
+                type: 'bar',
+                data: {
+                    labels: ['Backend', 'Frontend', 'DevOps', 'AI/ML', 'Product'],
+                    datasets: [{
+                        label: 'Avg Performance Score',
+                        data: [4.2, 3.9, 4.5, 4.7, 4.1],
+                        backgroundColor: '#6366f1',
+                        borderRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: { grid: { display: false }, ticks: { color: '#94a3b8' } },
+                        y: { grid: { color: '#1e293b' }, ticks: { color: '#94a3b8' }, max: 5 }
+                    },
+                    plugins: { legend: { display: false } }
+                }
+            });
+
+            const ctxPie = document.getElementById('tierPieChart').getContext('2d');
+            pieChartInstance = new Chart(ctxPie, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Exceptional', 'Exceeds', 'Meets', 'Developing'],
+                    datasets: [{
+                        data: [10, 35, 45, 10],
+                        backgroundColor: ['#6366f1', '#38bdf8', '#22c55e', '#fbbf24']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { position: 'bottom', labels: { color: '#94a3b8', boxWidth: 12 } } }
+                }
+            });
+        }
+
+        function updateMatrixScore() {
+            if (!radarChartInstance) return;
+            const delivery = parseFloat(document.getElementById('scoreDelivery').value);
+            const ownership = parseFloat(document.getElementById('scoreOwnership').value);
+            const collaboration = parseFloat(document.getElementById('scoreCollaboration').value);
+            const mentorship = parseFloat(document.getElementById('scoreMentorship').value);
+            const impact = parseFloat(document.getElementById('scoreImpact').value);
+
+            radarChartInstance.data.datasets[0].data = [delivery, ownership, collaboration, mentorship, impact];
+            radarChartInstance.update();
         }
     </script>
 </body>
