@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="81Aicyu58UFfFMLW-RMThNT_kYLKN4a_8huPibh3yCM" />
-    <title>MNC Review Copilot Enterprise Pro | Advanced Multi-Module Performance Suite</title>
+    <title>MNC Review Copilot Enterprise Pro v5.0 | Advanced Multi-Module Performance Suite</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -12,7 +12,7 @@
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body class="bg-slate-950 text-slate-100 h-full flex flex-col font-sans antialiased selection:bg-indigo-500 selection:text-white relative">
+<body class="bg-slate-950 text-slate-100 h-full flex flex-col font-sans antialiased selection:bg-indigo-500 selection:text-white relative overflow-x-hidden">
 
     <!-- ================= AUTHENTICATION OVERLAY / LOGIN MODAL ================= -->
     <div id="authOverlay" class="fixed inset-0 z-[200] bg-slate-950/95 backdrop-blur-xl flex items-center justify-center p-4 md:p-8 overflow-y-auto transition-all duration-300 pointer-events-auto">
@@ -95,7 +95,7 @@
                 </div>
             </div>
 
-            <!-- RIGHT COLUMN: Authentication & Verification Workflow (確保高層級 z-[220] 絕對可點擊) -->
+            <!-- RIGHT COLUMN: Authentication Workflow (z-[220] 置頂保護) -->
             <div class="lg:col-span-6 p-8 lg:p-10 flex flex-col justify-center relative z-[220] space-y-6 pointer-events-auto bg-slate-900">
                 <!-- Top Brand Header -->
                 <div class="flex items-center space-x-3 mb-2">
@@ -261,10 +261,10 @@
 
             <!-- Tab Navigation -->
             <nav class="hidden md:flex items-center space-x-1 bg-slate-950 p-1 rounded-xl border border-slate-800">
-                <button onclick="switchTab('studio')" id="nav-studio" class="px-4 py-1.5 rounded-lg text-xs font-medium transition bg-indigo-600 text-white shadow">Review Studio</button>
-                <button onclick="switchTab('matrix')" id="nav-matrix" class="px-4 py-1.5 rounded-lg text-xs font-medium transition text-slate-400 hover:text-slate-200">Competency Matrix</button>
-                <button onclick="switchTab('analytics')" id="nav-analytics" class="px-4 py-1.5 rounded-lg text-xs font-medium transition text-slate-400 hover:text-slate-200">HR Analytics</button>
-                <button onclick="switchTab('sandbox')" id="nav-sandbox" class="px-4 py-1.5 rounded-lg text-xs font-medium transition text-slate-400 hover:text-slate-200">Prompt Studio</button>
+                <button onclick="switchTab('studio')" id="nav-studio" class="px-4 py-1.5 rounded-lg text-xs font-medium transition bg-indigo-600 text-white shadow cursor-pointer">Review Studio</button>
+                <button onclick="switchTab('matrix')" id="nav-matrix" class="px-4 py-1.5 rounded-lg text-xs font-medium transition text-slate-400 hover:text-slate-200 cursor-pointer">Competency Matrix</button>
+                <button onclick="switchTab('analytics')" id="nav-analytics" class="px-4 py-1.5 rounded-lg text-xs font-medium transition text-slate-400 hover:text-slate-200 cursor-pointer">HR Analytics</button>
+                <button onclick="switchTab('sandbox')" id="nav-sandbox" class="px-4 py-1.5 rounded-lg text-xs font-medium transition text-slate-400 hover:text-slate-200 cursor-pointer">Prompt Studio</button>
             </nav>
 
             <div class="flex items-center space-x-3">
@@ -276,24 +276,24 @@
                         <span id="displayUserName" class="text-xs font-semibold block text-slate-200 leading-none">Admin User</span>
                         <span id="displayUserEmail" class="text-[9px] text-indigo-400">admin@mnc-enterprise.com</span>
                     </div>
-                    <button onclick="handleLogout()" class="text-slate-400 hover:text-rose-400 text-xs p-1.5 rounded-lg hover:bg-slate-800 transition" title="Logout Session">
+                    <button onclick="handleLogout()" class="text-slate-400 hover:text-rose-400 text-xs p-1.5 rounded-lg hover:bg-slate-800 transition cursor-pointer" title="Logout Session">
                         <i class="fa-solid fa-right-from-bracket"></i>
                     </button>
                 </div>
 
-                <!-- 🌐 AI Receptionist SaaS Link -->
+                <!-- 🤖 AI Receptionist SaaS Navigation Link -->
                 <a href="https://ai-receptionist-saas-ivory.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-xs font-medium px-3 py-1.5 rounded-lg border border-teal-500/40 bg-teal-600/10 text-teal-300 hover:bg-teal-600/20 transition flex items-center space-x-1.5" title="Visit AI Receptionist SaaS">
                     <i class="fa-solid fa-robot"></i>
                     <span>AI Receptionist</span>
                     <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-70"></i>
                 </a>
 
-                <!-- 🌐 Portfolio Hub Link -->
+                <!-- Portfolio Hub Navigation Button -->
                 <a href="index.html" class="text-xs font-medium px-3 py-1.5 rounded-lg border border-indigo-500/40 bg-indigo-600/10 text-indigo-300 hover:bg-indigo-600/20 transition flex items-center space-x-1.5" title="Return to Portfolio Hub">
                     <i class="fa-solid fa-globe"></i>
                     <span>Portfolio Hub</span>
                 </a>
-                <button onclick="toggleSettingsModal()" class="text-slate-400 hover:text-slate-200 text-xs px-3 py-1.5 rounded-lg border border-slate-800 bg-slate-900 transition flex items-center space-x-1.5">
+                <button onclick="toggleSettingsModal()" class="text-slate-400 hover:text-slate-200 text-xs px-3 py-1.5 rounded-lg border border-slate-800 bg-slate-900 transition flex items-center space-x-1.5 cursor-pointer">
                     <i class="fa-solid fa-sliders text-indigo-400"></i>
                     <span>Config</span>
                 </button>
@@ -307,6 +307,8 @@
         <!-- ================= TAB 1: REVIEW STUDIO ================= -->
         <div id="tab-studio" class="space-y-6">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Left Column: Complex Input Panel (5 Cols) -->
                 <section class="lg:col-span-5 bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-5">
                     <div>
                         <h2 class="text-base font-semibold text-indigo-300 flex items-center space-x-2">
@@ -316,6 +318,7 @@
                         <p class="text-xs text-slate-400">Configure corporate scope, behavioral pillars, and raw observations.</p>
                     </div>
 
+                    <!-- Employee Core Meta -->
                     <div class="grid grid-cols-2 gap-3">
                         <div>
                             <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Employee Name</label>
@@ -332,38 +335,54 @@
                         </div>
                     </div>
 
-                    <div>
-                        <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Evaluation Framework</label>
-                        <select id="frameworkSelect" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500">
-                            <option value="star">STAR Method (Situation, Task, Action, Result)</option>
-                            <option value="mckinsey">McKinsey MECE Structure (Mutually Exclusive, Collectively Exhaustive)</option>
-                            <option value="okr">OKR Achievement Matrix (Objectives & Key Results)</option>
-                            <option value="leadership">Leadership Pipeline & Scale Impact</option>
-                        </select>
+                    <!-- Tone Register & Evaluation Framework -->
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Tone Register</label>
+                            <select id="toneSelect" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500">
+                                <option value="executive" selected>Executive Professional</option>
+                                <option value="constructive">Constructive Growth-Oriented</option>
+                                <option value="praise">High-Impact Excellence Praise</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Evaluation Framework</label>
+                            <select id="frameworkSelect" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500">
+                                <option value="star">STAR Method (Situation, Task, Action, Result)</option>
+                                <option value="mckinsey">McKinsey MECE Structure</option>
+                                <option value="okr">OKR Achievement Matrix</option>
+                                <option value="leadership">Leadership Pipeline Scale</option>
+                            </select>
+                        </div>
                     </div>
 
+                    <!-- Behavioral Competency Weights -->
                     <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-3">
-                        <span class="text-[10px] uppercase tracking-wider text-indigo-400 font-semibold block">Competency Weighting (%)</span>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] uppercase tracking-wider text-indigo-400 font-semibold block">Competency Weighting (%)</span>
+                            <span id="calculatedScoreBadge" class="text-[10px] font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-800/60 px-2 py-0.5 rounded-full">Calculated: 88/100</span>
+                        </div>
                         <div class="space-y-2 text-xs">
                             <div class="flex justify-between items-center">
                                 <span class="text-slate-400">Technical Execution (Delivery)</span>
-                                <input type="range" id="weightTech" min="0" max="100" value="40" class="accent-indigo-500 w-28">
+                                <input type="range" id="weightTech" min="0" max="100" value="40" class="accent-indigo-500 w-28 cursor-pointer" oninput="recalculateReviewScore()">
                             </div>
                             <div class="flex justify-between items-center">
                                 <span class="text-slate-400">Cross-Team Collaboration</span>
-                                <input type="range" id="weightCollab" min="0" max="100" value="30" class="accent-indigo-500 w-28">
+                                <input type="range" id="weightCollab" min="0" max="100" value="30" class="accent-indigo-500 w-28 cursor-pointer" oninput="recalculateReviewScore()">
                             </div>
                             <div class="flex justify-between items-center">
                                 <span class="text-slate-400">Leadership & Ownership</span>
-                                <input type="range" id="weightLead" min="0" max="100" value="30" class="accent-indigo-500 w-28">
+                                <input type="range" id="weightLead" min="0" max="100" value="30" class="accent-indigo-500 w-28 cursor-pointer" oninput="recalculateReviewScore()">
                             </div>
                         </div>
                     </div>
 
+                    <!-- Raw Notes -->
                     <div>
                         <div class="flex justify-between items-center mb-1">
                             <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold">Raw Observations & Notes</label>
-                            <button onclick="loadComplexSample()" class="text-[11px] text-indigo-400 hover:underline">Load Complex Sample</button>
+                            <button onclick="loadComplexSample()" class="text-[11px] text-indigo-400 hover:underline cursor-pointer">Load Complex Sample</button>
                         </div>
                         <textarea id="rawNotes" rows="5" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-slate-200 text-xs focus:outline-none focus:border-indigo-500 placeholder-slate-600 transition resize-none" placeholder="Enter messy observations, native bullet points, metrics, or blockages..."></textarea>
                     </div>
@@ -374,27 +393,31 @@
                     </button>
                 </section>
 
+                <!-- Right Column: Multi-Tabbed Output Panel (7 Cols) -->
                 <section class="lg:col-span-7 bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-5">
                     <div class="flex items-center justify-between border-b border-slate-800 pb-3">
                         <div class="flex items-center space-x-2">
-                            <button onclick="switchOutputSubTab('rendered')" id="subtab-rendered" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-indigo-600 text-white transition">Rendered View</button>
-                            <button onclick="switchOutputSubTab('raw')" id="subtab-raw" class="text-xs font-semibold px-3 py-1.5 rounded-lg text-slate-400 hover:text-slate-200 transition">Raw Markdown / JSON</button>
+                            <button onclick="switchOutputSubTab('rendered')" id="subtab-rendered" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-indigo-600 text-white transition cursor-pointer">Rendered View</button>
+                            <button onclick="switchOutputSubTab('raw')" id="subtab-raw" class="text-xs font-semibold px-3 py-1.5 rounded-lg text-slate-400 hover:text-slate-200 transition cursor-pointer">Raw Markdown / JSON</button>
                         </div>
                         <div class="flex items-center space-x-3 text-xs text-slate-400">
                             <span>Words: <strong id="statWords" class="text-slate-200">0</strong></span>
                             <span>•</span>
-                            <span>Score: <strong id="statScore" class="text-emerald-400">98/100</strong></span>
+                            <span>Score: <strong id="statScore" class="text-emerald-400">92/100</strong></span>
                         </div>
                     </div>
 
+                    <!-- Rendered Output Box -->
                     <div id="outputRendered" class="bg-slate-950 border border-slate-800 rounded-xl p-5 min-h-[380px] max-h-[480px] text-slate-300 font-mono text-xs leading-relaxed overflow-y-auto space-y-4">
                         <span class="text-slate-600 italic">// Enterprise review synthesis waiting for execution...</span>
                     </div>
 
+                    <!-- Raw Output Box (Hidden by default) -->
                     <div id="outputRawContainer" class="hidden">
                         <textarea id="outputRaw" rows="16" readonly class="w-full bg-slate-950 border border-slate-800 rounded-xl p-4 text-slate-300 font-mono text-xs leading-relaxed focus:outline-none resize-none"></textarea>
                     </div>
 
+                    <!-- Action Bar -->
                     <div class="grid grid-cols-4 gap-3">
                         <button onclick="copyOutput()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 py-2.5 rounded-xl text-xs font-medium border border-slate-700 flex items-center justify-center space-x-1.5 cursor-pointer">
                             <i class="fa-regular fa-copy text-indigo-400"></i>
@@ -412,6 +435,20 @@
                             <i class="fa-solid fa-file-arrow-down"></i>
                             <span>Export .TXT</span>
                         </button>
+                    </div>
+
+                    <!-- Session Archive Drawer -->
+                    <div class="border-t border-slate-800/80 pt-4 space-y-3">
+                        <div class="flex justify-between items-center text-xs">
+                            <span class="text-slate-400 font-semibold flex items-center space-x-1.5">
+                                <i class="fa-solid fa-box-archive text-indigo-400"></i>
+                                <span>Recent Session Archive</span>
+                            </span>
+                            <button onclick="clearArchive()" class="text-[10px] text-slate-500 hover:text-rose-400 underline">Clear Archive</button>
+                        </div>
+                        <div id="archiveContainer" class="space-y-2 max-h-32 overflow-y-auto text-xs">
+                            <p class="text-slate-600 italic text-[11px]">No archived reviews in current session.</p>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -480,9 +517,12 @@
         <!-- ================= TAB 4: PROMPT STUDIO / SANDBOX ================= -->
         <div id="tab-sandbox" class="hidden space-y-6">
             <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-5">
-                <div>
-                    <h2 class="text-base font-semibold text-indigo-300">System Prompt Engineering Sandbox</h2>
-                    <p class="text-xs text-slate-400">Customize the underlying LLM system prompt instructions injected into the synthesis engine.</p>
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h2 class="text-base font-semibold text-indigo-300">System Prompt Engineering Sandbox</h2>
+                        <p class="text-xs text-slate-400">Customize the underlying LLM system prompt instructions injected into the synthesis engine.</p>
+                    </div>
+                    <button onclick="resetSystemPrompt()" class="text-xs text-slate-400 hover:text-slate-200 underline">Reset to Default</button>
                 </div>
 
                 <div>
@@ -559,11 +599,13 @@
         let barChartInstance = null;
         let pieChartInstance = null;
         let currentVerificationEmail = '';
+        let archiveMemory = [];
 
         document.addEventListener('DOMContentLoaded', () => {
             initUserStorage();
             checkSessionState();
             initCharts();
+            recalculateReviewScore();
         });
 
         function initUserStorage() {
@@ -794,25 +836,35 @@
         function switchTab(tabId) {
             ['studio', 'matrix', 'analytics', 'sandbox'].forEach(id => {
                 document.getElementById(`tab-${id}`).classList.add('hidden');
-                document.getElementById(`nav-${id}`).className = "px-4 py-1.5 rounded-lg text-xs font-medium transition text-slate-400 hover:text-slate-200";
+                document.getElementById(`nav-${id}`).className = "px-4 py-1.5 rounded-lg text-xs font-medium transition text-slate-400 hover:text-slate-200 cursor-pointer";
             });
             document.getElementById(`tab-${tabId}`).classList.remove('hidden');
-            document.getElementById(`nav-${tabId}`).className = "px-4 py-1.5 rounded-lg text-xs font-medium transition bg-indigo-600 text-white shadow";
+            document.getElementById(`nav-${tabId}`).className = "px-4 py-1.5 rounded-lg text-xs font-medium transition bg-indigo-600 text-white shadow cursor-pointer";
         }
 
         function switchOutputSubTab(mode) {
             if(mode === 'rendered') {
                 document.getElementById('outputRendered').classList.remove('hidden');
                 document.getElementById('outputRawContainer').classList.add('hidden');
-                document.getElementById('subtab-rendered').className = "text-xs font-semibold px-3 py-1.5 rounded-lg bg-indigo-600 text-white transition";
-                document.getElementById('subtab-raw').className = "text-xs font-semibold px-3 py-1.5 rounded-lg text-slate-400 hover:text-slate-200 transition";
+                document.getElementById('subtab-rendered').className = "text-xs font-semibold px-3 py-1.5 rounded-lg bg-indigo-600 text-white transition cursor-pointer";
+                document.getElementById('subtab-raw').className = "text-xs font-semibold px-3 py-1.5 rounded-lg text-slate-400 hover:text-slate-200 transition cursor-pointer";
             } else {
                 document.getElementById('outputRendered').classList.add('hidden');
                 document.getElementById('outputRawContainer').classList.remove('hidden');
-                document.getElementById('subtab-raw').className = "text-xs font-semibold px-3 py-1.5 rounded-lg bg-indigo-600 text-white transition";
-                document.getElementById('subtab-rendered').className = "text-xs font-semibold px-3 py-1.5 rounded-lg text-slate-400 hover:text-slate-200 transition";
+                document.getElementById('subtab-raw').className = "text-xs font-semibold px-3 py-1.5 rounded-lg bg-indigo-600 text-white transition cursor-pointer";
+                document.getElementById('subtab-rendered').className = "text-xs font-semibold px-3 py-1.5 rounded-lg text-slate-400 hover:text-slate-200 transition cursor-pointer";
                 document.getElementById('outputRaw').value = document.getElementById('outputRendered').innerText;
             }
+        }
+
+        function recalculateReviewScore() {
+            const wTech = parseInt(document.getElementById('weightTech').value) || 0;
+            const wCollab = parseInt(document.getElementById('weightCollab').value) || 0;
+            const wLead = parseInt(document.getElementById('weightLead').value) || 0;
+            
+            const rawScore = Math.min(100, Math.round((wTech * 0.45) + (wCollab * 0.3) + (wLead * 0.35) + 20));
+            document.getElementById('calculatedScoreBadge').innerText = `Calculated: ${rawScore}/100`;
+            document.getElementById('statScore').innerText = `${rawScore}/100`;
         }
 
         function toggleSettingsModal() {
@@ -830,16 +882,23 @@
             showToast('System directive updated successfully!');
         }
 
+        function resetSystemPrompt() {
+            document.getElementById('systemPromptConfig').value = "You are an expert HR Director and Engineering VP at a top multinational corporation (MNC). Transform the manager's raw observations into a highly structured, objective, and defensible performance appraisal utilizing rigorous executive standards and the STAR framework.";
+            showToast('Reset to default directive.');
+        }
+
         function loadComplexSample() {
             document.getElementById('empName').value = 'Victoria Sterling';
             document.getElementById('empRating').value = 'Level 4: Exceeds';
             document.getElementById('rawNotes').value = 'Victoria successfully drove the multi-region Kubernetes migration with zero downtime. Mentored 3 junior engineers who were promoted. Needs to improve documentation thoroughness prior to final sign-off.';
+            recalculateReviewScore();
         }
 
         async function generateComplexReview() {
             const name = document.getElementById('empName').value.trim() || 'Employee';
             const rating = document.getElementById('empRating').value;
             const framework = document.getElementById('frameworkSelect').value;
+            const tone = document.getElementById('toneSelect').value;
             const raw = document.getElementById('rawNotes').value.trim();
             const renderedBox = document.getElementById('outputRendered');
 
@@ -855,7 +914,7 @@
                 let htmlContent = `
                     <div class="border-b border-slate-800 pb-3 mb-3">
                         <h3 class="text-indigo-300 font-bold text-sm">MNC ENTERPRISE APPRAISAL REPORT</h3>
-                        <p class="text-[11px] text-slate-400">Subject: ${name} | Tier: ${rating} | Date: ${dateStr} | Framework: ${framework.toUpperCase()}</p>
+                        <p class="text-[11px] text-slate-400">Subject: ${name} | Tier: ${rating} | Date: ${dateStr} | Register: ${tone.toUpperCase()} | Framework: ${framework.toUpperCase()}</p>
                     </div>
                     <div class="space-y-3">
                         <div>
@@ -895,7 +954,33 @@
         }
 
         function saveToComplexHistory() {
-            showToast('Review archived to enterprise session store.');
+            const name = document.getElementById('empName').value.trim() || 'Employee';
+            const rating = document.getElementById('empRating').value;
+            const dateStr = new Date().toLocaleTimeString();
+
+            archiveMemory.unshift({ name, rating, time: dateStr });
+            renderArchiveList();
+            showToast('Review archived to session store.');
+        }
+
+        function renderArchiveList() {
+            const container = document.getElementById('archiveContainer');
+            if (archiveMemory.length === 0) {
+                container.innerHTML = '<p class="text-slate-600 italic text-[11px]">No archived reviews in current session.</p>';
+                return;
+            }
+            container.innerHTML = archiveMemory.map(item => `
+                <div class="bg-slate-950 border border-slate-800 rounded-lg p-2 flex justify-between items-center text-[11px]">
+                    <span class="text-slate-200 font-medium">${item.name} <span class="text-indigo-400 text-[10px]">(${item.rating})</span></span>
+                    <span class="text-slate-500">${item.time}</span>
+                </div>
+            `).join('');
+        }
+
+        function clearArchive() {
+            archiveMemory = [];
+            renderArchiveList();
+            showToast('Archive cleared.');
         }
 
         function downloadJSON() {
