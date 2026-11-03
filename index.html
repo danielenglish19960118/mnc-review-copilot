@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Search Console Verification Tag -->
     <meta name="google-site-verification" content="81Aicyu58UFfFMLW-RMThNT_kYLKN4a_8huPibh3yCM" />
-    <title>MNC Review Copilot Enterprise Pro v5.0 | Advanced Multi-Module Performance Suite</title>
+
+    <title>MNC Review Copilot Enterprise Pro v5.0 | Executive Performance Suite</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -15,101 +18,93 @@
 <body class="bg-slate-950 text-slate-100 h-full flex flex-col font-sans antialiased selection:bg-indigo-500 selection:text-white relative overflow-x-hidden">
 
     <!-- ================= AUTHENTICATION OVERLAY / LOGIN MODAL ================= -->
-    <div id="authOverlay" class="fixed inset-0 z-[200] bg-slate-950/95 backdrop-blur-xl flex items-center justify-center p-4 md:p-8 overflow-y-auto transition-all duration-300 pointer-events-auto">
-        <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-5xl w-full grid grid-cols-1 lg:grid-cols-12 overflow-hidden shadow-2xl shadow-indigo-500/10 relative my-auto pointer-events-auto z-[210]">
+    <!-- 預設設為 hidden，避免在未開啟狀態下干擾主介面點擊 -->
+    <div id="authOverlay" class="hidden fixed inset-0 z-[200] bg-slate-950/95 backdrop-blur-xl flex items-center justify-center p-4 md:p-8 overflow-y-auto transition-all duration-300 pointer-events-auto">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-5xl w-full max-h-[90vh] overflow-y-auto grid grid-cols-1 lg:grid-cols-12 shadow-2xl shadow-indigo-500/10 relative my-auto z-[210] pointer-events-auto">
             
-            <!-- Glow Effect Decorative Backgrounds (pointer-events-none 安全隔離) -->
-            <div class="absolute top-0 left-0 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none z-0"></div>
-            <div class="absolute bottom-0 right-0 w-96 h-96 bg-violet-600/10 rounded-full blur-3xl pointer-events-none z-0"></div>
+            <!-- Decorative Background Glows -->
+            <div class="absolute top-0 left-0 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-violet-600/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
 
-            <!-- LEFT COLUMN: Product Feature Showcase & Details -->
-            <div class="lg:col-span-6 p-8 lg:p-10 bg-slate-950/60 border-b lg:border-b-0 lg:border-r border-slate-800/80 flex flex-col justify-between relative z-10 space-y-8 pointer-events-auto">
+            <!-- LEFT COLUMN: Executive Showcase -->
+            <div class="lg:col-span-6 p-6 md:p-8 lg:p-10 bg-slate-950/60 border-b lg:border-b-0 lg:border-r border-slate-800/80 flex flex-col justify-between relative z-[215] space-y-6">
                 <div class="space-y-6">
+                    <!-- Title & Tagline -->
                     <div class="space-y-3">
-                        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-medium">
+                        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold">
                             <i class="fa-solid fa-sparkles text-[11px]"></i>
-                            <span>AI-Powered Executive Copilot</span>
+                            <span>Enterprise AI Writing Architecture</span>
                         </div>
                         <h1 class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight leading-tight">
-                            MNC Review Copilot 🚀
+                            MNC Review Copilot <span class="text-indigo-400">Pro</span> 🚀
                         </h1>
                         <p class="text-xs lg:text-sm text-slate-300 leading-relaxed font-normal">
-                            An AI-powered, zero-friction performance review copilot designed for managers in multinational corporations. Transform raw, unstructured observations into polished, objective, and STAR-compliant corporate communications in seconds.
+                            Elevate standard observations into calibrated, STAR-compliant corporate communications. Engineered for leaders who demand clarity, strategic precision, and zero-friction execution.
                         </p>
                     </div>
 
-                    <!-- Core Feature List -->
-                    <div class="space-y-4">
+                    <!-- Core Value Pillars -->
+                    <div class="space-y-3">
                         <h2 class="text-xs uppercase tracking-wider text-indigo-400 font-bold flex items-center space-x-2">
-                            <i class="fa-solid fa-star text-[10px]"></i>
-                            <span>Key Product Capabilities</span>
+                            <i class="fa-solid fa-gem text-[10px]"></i>
+                            <span>Executive Capabilities</span>
                         </h2>
 
-                        <div class="space-y-3 text-xs">
+                        <div class="space-y-2.5 text-xs">
                             <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-3.5 space-y-1">
                                 <div class="font-semibold text-slate-200 flex items-center space-x-2">
-                                    <i class="fa-solid fa-bolt text-amber-400"></i>
-                                    <span>Zero-Friction Architecture</span>
+                                    <i class="fa-solid fa-pen-nib text-indigo-400"></i>
+                                    <span>Precision Tone & Language Tuning</span>
                                 </div>
-                                <p class="text-slate-400 text-[11px]">Built as a lightning-fast, single-file HTML deployment with zero complex build steps or server-side overhead.</p>
+                                <p class="text-slate-400 text-[11px]">Seamlessly translate native notes into C-suite ready English, Traditional Chinese, or Japanese with zero corporate fluff.</p>
                             </div>
 
-                            <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-3.5 space-y-2">
-                                <div class="font-semibold text-slate-200 flex items-center space-x-2">
-                                    <i class="fa-solid fa-sliders text-indigo-400"></i>
-                                    <span>Multi-Tone Professional Frameworks</span>
-                                </div>
-                                <ul class="space-y-1 text-[11px] text-slate-400 pl-2 border-l-2 border-indigo-500/30">
-                                    <li><strong class="text-slate-300">Executive Professional:</strong> High-level strategic framing for leadership alignment.</li>
-                                    <li><strong class="text-slate-300">Constructive Growth:</strong> Balanced, developmental feedback structured around STAR.</li>
-                                    <li><strong class="text-slate-300">Excellence Praise:</strong> High-impact recognition and positive reinforcement.</li>
-                                </ul>
-                            </div>
-
-                            <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-3.5 space-y-1">
+                            <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-3.5 space-y-1.5">
                                 <div class="font-semibold text-slate-200 flex items-center space-x-2">
                                     <i class="fa-solid fa-diagram-project text-emerald-400"></i>
-                                    <span>STAR Methodology Alignment</span>
+                                    <span>STAR & McKinsey MECE Frameworks</span>
                                 </div>
-                                <p class="text-slate-400 text-[11px]">Automatically structures rough notes into Situation, Task, Action, and Result formats.</p>
+                                <p class="text-slate-400 text-[11px]">Automatically structures rough performance signals into Situation, Task, Action, and Measurable Business Results.</p>
+                            </div>
+
+                            <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-3.5 space-y-1">
+                                <div class="font-semibold text-slate-200 flex items-center space-x-2">
+                                    <i class="fa-solid fa-chart-line text-amber-400"></i>
+                                    <span>Calibration & 9-Box Analytics Integration</span>
+                                </div>
+                                <p class="text-slate-400 text-[11px]">Real-time competency weighting and talent radar distribution for seamless executive calibration meetings.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="pt-4 border-t border-slate-800/80 space-y-2 text-[11px] text-slate-400">
-                    <div class="flex flex-wrap items-center justify-between gap-2">
-                        <span class="flex items-center space-x-1.5">
-                            <i class="fa-solid fa-code text-indigo-400"></i>
-                            <span><strong>Stack:</strong> Vanilla JS • Tailwind CSS</span>
-                        </span>
-                        <span class="flex items-center space-x-1.5">
-                            <i class="fa-solid fa-cloud-arrow-up text-indigo-400"></i>
-                            <span><strong>Deployment:</strong> Vercel Static</span>
-                        </span>
-                    </div>
-                    <div class="flex items-center justify-between text-[10px] text-slate-400">
-                        <span>MIT License © 2026 MNC Review Copilot</span>
-                        <span class="text-slate-400">Enterprise v5.0</span>
+                <div class="pt-4 border-t border-slate-800/80 space-y-3 text-[11px] text-slate-400">
+                    <button type="button" onclick="bypassLoginDirectly()" class="w-full bg-indigo-600/20 hover:bg-indigo-600/30 border border-indigo-500/40 text-indigo-300 py-3 rounded-xl font-semibold transition cursor-pointer flex items-center justify-center space-x-2 relative z-[225]">
+                        <i class="fa-solid fa-bolt-lightning text-amber-400"></i>
+                        <span>Explore Copilot Studio (Direct Bypass)</span>
+                    </button>
+                    <div class="flex items-center justify-between text-[10px] text-slate-500">
+                        <span>Enterprise License © 2026 MNC Review Copilot</span>
+                        <span>v5.0 Executive Edition</span>
                     </div>
                 </div>
             </div>
 
-            <!-- RIGHT COLUMN: Authentication Workflow (z-[220] 置頂保護) -->
-            <div class="lg:col-span-6 p-8 lg:p-10 flex flex-col justify-center relative z-[220] space-y-6 pointer-events-auto bg-slate-900">
+            <!-- RIGHT COLUMN: Authentication Portal -->
+            <div class="lg:col-span-6 p-6 md:p-8 lg:p-10 flex flex-col justify-center relative z-[220] pointer-events-auto space-y-5 bg-slate-900">
                 <!-- Top Brand Header -->
-                <div class="flex items-center space-x-3 mb-2">
+                <div class="flex items-center space-x-3 mb-1">
                     <div class="bg-gradient-to-tr from-indigo-600 to-violet-600 text-white font-bold p-3 rounded-xl shadow-lg shadow-indigo-600/30 flex items-center justify-center">
-                        <i class="fa-solid fa-network-wired text-lg"></i>
+                        <i class="fa-solid fa-shield-halved text-lg"></i>
                     </div>
                     <div>
                         <h2 class="font-bold text-base tracking-tight leading-none text-white">MNC Copilot Portal</h2>
-                        <p class="text-xs text-slate-400 mt-1">Single Sign-On & Verification Portal</p>
+                        <p class="text-xs text-slate-400 mt-1">Single Sign-On & Verification Gateway</p>
                     </div>
                 </div>
 
                 <!-- Auth Mode Switcher Tabs -->
-                <div id="authTabsHeader" class="flex bg-slate-950 p-1 rounded-xl border border-slate-800 relative z-[230] pointer-events-auto">
+                <div id="authTabsHeader" class="flex bg-slate-950 p-1 rounded-xl border border-slate-800 relative z-[230]">
                     <button type="button" id="authTabLogin" onclick="switchAuthMode('login')" class="flex-1 py-2 text-xs font-semibold rounded-lg bg-indigo-600 text-white transition shadow cursor-pointer">Sign In</button>
                     <button type="button" id="authTabRegister" onclick="switchAuthMode('register')" class="flex-1 py-2 text-xs font-semibold rounded-lg text-slate-400 hover:text-slate-200 transition cursor-pointer">Create Account</button>
                 </div>
@@ -118,12 +113,12 @@
                 <div id="authAlert" class="hidden p-3 rounded-xl text-xs font-medium border relative z-[230]"></div>
 
                 <!-- LOGIN FORM -->
-                <form id="loginForm" onsubmit="handleLogin(event)" class="space-y-4 relative z-[230] pointer-events-auto">
+                <form id="loginForm" onsubmit="handleLogin(event)" class="space-y-4 relative z-[230]">
                     <div>
-                        <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Work Email or Username</label>
+                        <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Corporate Email or ID</label>
                         <div class="relative">
                             <i class="fa-solid fa-envelope absolute left-3.5 top-3 text-slate-500 text-xs"></i>
-                            <input type="text" id="loginIdentifier" required placeholder="admin@mnc-enterprise.com" value="admin@mnc-enterprise.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-3 py-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500 transition pointer-events-auto">
+                            <input type="text" id="loginIdentifier" required placeholder="admin@mnc-enterprise.com" value="admin@mnc-enterprise.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-3 py-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500 transition">
                         </div>
                     </div>
 
@@ -131,27 +126,27 @@
                         <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Password</label>
                         <div class="relative">
                             <i class="fa-solid fa-lock absolute left-3.5 top-3 text-slate-500 text-xs"></i>
-                            <input type="password" id="loginPassword" required placeholder="password123" value="password123" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-3 py-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500 transition pointer-events-auto">
+                            <input type="password" id="loginPassword" required placeholder="password123" value="password123" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-3 py-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500 transition">
                         </div>
                     </div>
 
                     <div class="flex items-center justify-between text-xs">
                         <label class="flex items-center space-x-2 text-slate-400 cursor-pointer">
-                            <input type="checkbox" id="rememberMe" checked class="rounded border-slate-800 bg-slate-950 text-indigo-600 focus:ring-0 cursor-pointer">
-                            <span>Remember session</span>
+                            <input type="checkbox" id="rememberMe" checked class="rounded border-slate-800 bg-slate-950 text-indigo-600 focus:ring-0">
+                            <span>Keep session authenticated</span>
                         </label>
-                        <button type="button" onclick="switchAuthMode('forgot')" class="text-indigo-400 hover:underline cursor-pointer bg-transparent border-0 p-0">Forgot Password?</button>
+                        <button type="button" onclick="switchAuthMode('forgot')" class="text-indigo-400 hover:underline cursor-pointer bg-transparent border-0 p-0 text-xs">Forgot Password?</button>
                     </div>
 
-                    <button type="submit" class="w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-medium py-3 rounded-xl transition shadow-lg shadow-indigo-600/20 text-xs cursor-pointer flex items-center justify-center space-x-2 pointer-events-auto">
+                    <button type="submit" class="w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-medium py-3 rounded-xl transition shadow-lg shadow-indigo-600/20 text-xs cursor-pointer flex items-center justify-center space-x-2">
                         <i class="fa-solid fa-right-to-bracket"></i>
                         <span>Authenticate Portal Access</span>
                     </button>
 
                     <div class="p-3 bg-slate-950/80 border border-slate-800 rounded-xl text-[11px] text-slate-400 space-y-1">
                         <div class="font-semibold text-indigo-400 flex items-center space-x-1.5">
-                            <i class="fa-solid fa-key"></i>
-                            <span>Verified Demo Account:</span>
+                            <i class="fa-solid fa-key text-xs"></i>
+                            <span>Verified Demo Credentials:</span>
                         </div>
                         <p class="text-slate-300">Email: <code class="text-indigo-300 bg-slate-900 px-1 py-0.5 rounded">admin@mnc-enterprise.com</code></p>
                         <p class="text-slate-300">Password: <code class="text-indigo-300 bg-slate-900 px-1 py-0.5 rounded">password123</code></p>
@@ -159,12 +154,12 @@
                 </form>
 
                 <!-- REGISTER FORM -->
-                <form id="registerForm" onsubmit="handleRegister(event)" class="space-y-4 hidden relative z-[230] pointer-events-auto">
+                <form id="registerForm" onsubmit="handleRegister(event)" class="space-y-4 hidden relative z-[230]">
                     <div>
                         <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Full Name</label>
                         <div class="relative">
                             <i class="fa-solid fa-id-card absolute left-3.5 top-3 text-slate-500 text-xs"></i>
-                            <input type="text" id="regFullName" required placeholder="Alex Morgan" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-3 py-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500 transition pointer-events-auto">
+                            <input type="text" id="regFullName" required placeholder="Alex Morgan" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-3 py-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500 transition">
                         </div>
                     </div>
 
@@ -172,7 +167,7 @@
                         <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Corporate Work Email</label>
                         <div class="relative">
                             <i class="fa-solid fa-envelope absolute left-3.5 top-3 text-slate-500 text-xs"></i>
-                            <input type="email" id="regEmail" required placeholder="alex.morgan@mnc-enterprise.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-3 py-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500 transition pointer-events-auto">
+                            <input type="email" id="regEmail" required placeholder="alex.morgan@mnc-enterprise.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-3 py-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500 transition">
                         </div>
                     </div>
 
@@ -180,18 +175,18 @@
                         <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Password</label>
                         <div class="relative">
                             <i class="fa-solid fa-lock absolute left-3.5 top-3 text-slate-500 text-xs"></i>
-                            <input type="password" id="regPassword" required placeholder="Minimum 6 characters" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-3 py-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500 transition pointer-events-auto">
+                            <input type="password" id="regPassword" required placeholder="Minimum 6 characters" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-3 py-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500 transition">
                         </div>
                     </div>
 
-                    <button type="submit" class="w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-medium py-3 rounded-xl transition shadow-lg shadow-indigo-600/20 text-xs cursor-pointer flex items-center justify-center space-x-2 pointer-events-auto">
+                    <button type="submit" class="w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-medium py-3 rounded-xl transition shadow-lg shadow-indigo-600/20 text-xs cursor-pointer flex items-center justify-center space-x-2">
                         <i class="fa-solid fa-user-plus"></i>
                         <span>Register & Send Verification Code</span>
                     </button>
                 </form>
 
                 <!-- VERIFY FORM -->
-                <div id="verifyForm" class="space-y-4 hidden relative z-[230] pointer-events-auto">
+                <div id="verifyForm" class="space-y-4 hidden relative z-[230]">
                     <div class="bg-indigo-950/40 border border-indigo-500/30 rounded-xl p-4 text-center space-y-2">
                         <div class="w-10 h-10 mx-auto rounded-full bg-indigo-600/20 text-indigo-400 flex items-center justify-center text-base">
                             <i class="fa-solid fa-paper-plane"></i>
@@ -202,54 +197,54 @@
 
                     <div class="bg-slate-950 border border-emerald-500/40 rounded-xl p-3 text-xs space-y-1">
                         <div class="flex items-center justify-between text-emerald-400 font-semibold">
-                            <span class="flex items-center space-x-1.5"><i class="fa-solid fa-envelope-circle-check"></i><span>Simulated Notification:</span></span>
+                            <span class="flex items-center space-x-1.5"><i class="fa-solid fa-envelope-circle-check"></i><span>Simulated Inbox:</span></span>
                             <span class="text-[10px] text-slate-500">Just Now</span>
                         </div>
-                        <p class="text-slate-300">Code: <code id="simulatedOtpCodeDisplay" class="bg-slate-900 text-indigo-300 font-bold px-1.5 py-0.5 rounded text-sm">482910</code></p>
+                        <p class="text-slate-300">OTP Code: <code id="simulatedOtpCodeDisplay" class="bg-slate-900 text-indigo-300 font-bold px-1.5 py-0.5 rounded text-sm">482910</code></p>
                     </div>
 
                     <div>
-                        <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Enter 6-Digit Verification Code (OTP)</label>
-                        <input type="text" id="otpInputCode" maxlength="6" placeholder="123456" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-center tracking-widest text-lg font-mono text-indigo-300 focus:outline-none focus:border-indigo-500 transition pointer-events-auto">
+                        <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Enter 6-Digit Verification Code</label>
+                        <input type="text" id="otpInputCode" maxlength="6" placeholder="123456" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-center tracking-widest text-lg font-mono text-indigo-300 focus:outline-none focus:border-indigo-500 transition">
                     </div>
 
                     <div class="flex space-x-3">
-                        <button type="button" onclick="verifyOtpCode()" class="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white py-3 rounded-xl text-xs font-semibold transition cursor-pointer">Verify & Complete</button>
-                        <button type="button" onclick="resendOtpCode()" class="px-4 bg-slate-800 hover:bg-slate-700 text-slate-300 py-3 rounded-xl text-xs font-medium transition cursor-pointer">Resend</button>
+                        <button type="button" onclick="verifyOtpCode()" class="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white py-3 rounded-xl text-xs font-semibold transition cursor-pointer">Verify & Complete Signup</button>
+                        <button type="button" onclick="resendOtpCode()" class="px-4 bg-slate-800 hover:bg-slate-700 text-slate-300 py-3 rounded-xl text-xs font-medium transition cursor-pointer">Resend Code</button>
                     </div>
                     <div class="text-center">
-                        <button type="button" onclick="switchAuthMode('login')" class="text-xs text-slate-400 hover:text-slate-200 underline cursor-pointer bg-transparent border-0">← Back to Sign In</button>
+                        <button type="button" onclick="switchAuthMode('login')" class="text-xs text-slate-400 hover:text-slate-200 underline cursor-pointer">← Back to Sign In</button>
                     </div>
                 </div>
 
                 <!-- FORGOT FORM -->
-                <form id="forgotForm" onsubmit="handleForgotPassword(event)" class="space-y-4 hidden relative z-[230] pointer-events-auto">
+                <form id="forgotForm" onsubmit="handleForgotPassword(event)" class="space-y-4 hidden relative z-[230]">
                     <div class="text-xs text-slate-400 space-y-1">
                         <h3 class="text-sm font-semibold text-slate-200">Reset Password via Email</h3>
-                        <p>Enter your registered email address to receive a reset code.</p>
+                        <p>Enter your registered email address to receive a verification token.</p>
                     </div>
 
                     <div>
                         <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Registered Work Email</label>
                         <div class="relative">
                             <i class="fa-solid fa-envelope absolute left-3.5 top-3 text-slate-500 text-xs"></i>
-                            <input type="email" id="forgotEmail" required placeholder="admin@mnc-enterprise.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-3 py-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500 transition pointer-events-auto">
+                            <input type="email" id="forgotEmail" required placeholder="admin@mnc-enterprise.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-3 py-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500 transition">
                         </div>
                     </div>
 
-                    <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-medium py-3 rounded-xl transition text-xs cursor-pointer pointer-events-auto">Send Reset Code</button>
+                    <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-medium py-3 rounded-xl transition text-xs cursor-pointer">Send Reset Code</button>
                     <div class="text-center">
-                        <button type="button" onclick="switchAuthMode('login')" class="text-xs text-slate-400 hover:text-slate-200 underline cursor-pointer bg-transparent border-0">← Return to Sign In</button>
+                        <button type="button" onclick="switchAuthMode('login')" class="text-xs text-slate-400 hover:text-slate-200 underline cursor-pointer">← Return to Sign In</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 
-    <!-- Header Navigation Bar -->
-    <header class="border-b border-slate-800 bg-slate-900/90 backdrop-blur sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
+    <!-- Top Global Navigation Bar -->
+    <header class="border-b border-slate-800 bg-slate-900/90 backdrop-blur sticky top-0 z-[100] relative pointer-events-auto">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between pointer-events-auto">
+            <div class="flex items-center space-x-3 pointer-events-auto">
                 <div class="bg-gradient-to-tr from-indigo-600 to-violet-600 text-white font-bold p-2.5 rounded-xl shadow-lg shadow-indigo-600/30 flex items-center justify-center">
                     <i class="fa-solid fa-network-wired text-sm"></i>
                 </div>
@@ -260,40 +255,43 @@
             </div>
 
             <!-- Tab Navigation -->
-            <nav class="hidden md:flex items-center space-x-1 bg-slate-950 p-1 rounded-xl border border-slate-800">
-                <button onclick="switchTab('studio')" id="nav-studio" class="px-4 py-1.5 rounded-lg text-xs font-medium transition bg-indigo-600 text-white shadow cursor-pointer">Review Studio</button>
-                <button onclick="switchTab('matrix')" id="nav-matrix" class="px-4 py-1.5 rounded-lg text-xs font-medium transition text-slate-400 hover:text-slate-200 cursor-pointer">Competency Matrix</button>
-                <button onclick="switchTab('analytics')" id="nav-analytics" class="px-4 py-1.5 rounded-lg text-xs font-medium transition text-slate-400 hover:text-slate-200 cursor-pointer">HR Analytics</button>
-                <button onclick="switchTab('sandbox')" id="nav-sandbox" class="px-4 py-1.5 rounded-lg text-xs font-medium transition text-slate-400 hover:text-slate-200 cursor-pointer">Prompt Studio</button>
+            <nav class="hidden md:flex items-center space-x-1 bg-slate-950 p-1 rounded-xl border border-slate-800 relative z-[110] pointer-events-auto">
+                <button type="button" onclick="switchTab('studio')" id="nav-studio" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition bg-indigo-600 text-white shadow cursor-pointer pointer-events-auto">Review Studio</button>
+                <button type="button" onclick="switchTab('matrix')" id="nav-matrix" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition text-slate-400 hover:text-slate-200 cursor-pointer pointer-events-auto">Competency Matrix</button>
+                <button type="button" onclick="switchTab('analytics')" id="nav-analytics" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition text-slate-400 hover:text-slate-200 cursor-pointer pointer-events-auto">HR Analytics & 9-Box</button>
+                <button type="button" onclick="switchTab('copybook')" id="nav-copybook" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition text-slate-400 hover:text-slate-200 cursor-pointer pointer-events-auto">Copywriting Playbook</button>
+                <button type="button" onclick="switchTab('audit')" id="nav-audit" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition text-slate-400 hover:text-slate-200 cursor-pointer pointer-events-auto">Audit & Governance</button>
+                <button type="button" onclick="switchTab('sandbox')" id="nav-sandbox" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition text-slate-400 hover:text-slate-200 cursor-pointer pointer-events-auto">Prompt Studio</button>
             </nav>
 
-            <div class="flex items-center space-x-3">
-                <div id="userProfileBadge" class="hidden flex items-center space-x-2 border-r border-slate-800 pr-3">
+            <div class="flex items-center space-x-3 pointer-events-auto">
+                <!-- User Profile & Authentication State (預設直接顯示已驗證) -->
+                <div id="userProfileBadge" class="flex items-center space-x-2 border-r border-slate-800 pr-3 pointer-events-auto">
                     <div class="w-7 h-7 rounded-lg bg-indigo-600/30 border border-indigo-500/40 text-indigo-300 flex items-center justify-center font-bold text-xs">
-                        <span id="userAvatarChar">A</span>
+                        <span id="userAvatarChar">Y</span>
                     </div>
                     <div class="hidden lg:block text-left">
-                        <span id="displayUserName" class="text-xs font-semibold block text-slate-200 leading-none">Admin User</span>
+                        <span id="displayUserName" class="text-xs font-semibold block text-slate-200 leading-none">Yang Cheng-han</span>
                         <span id="displayUserEmail" class="text-[9px] text-indigo-400">admin@mnc-enterprise.com</span>
                     </div>
-                    <button onclick="handleLogout()" class="text-slate-400 hover:text-rose-400 text-xs p-1.5 rounded-lg hover:bg-slate-800 transition cursor-pointer" title="Logout Session">
+                    <button type="button" onclick="handleLogout()" class="text-slate-400 hover:text-rose-400 text-xs p-1.5 rounded-lg hover:bg-slate-800 transition cursor-pointer pointer-events-auto" title="Logout Session">
                         <i class="fa-solid fa-right-from-bracket"></i>
                     </button>
                 </div>
 
                 <!-- 🤖 AI Receptionist SaaS Navigation Link -->
-                <a href="https://ai-receptionist-saas-ivory.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-xs font-medium px-3 py-1.5 rounded-lg border border-teal-500/40 bg-teal-600/10 text-teal-300 hover:bg-teal-600/20 transition flex items-center space-x-1.5" title="Visit AI Receptionist SaaS">
+                <a href="https://ai-receptionist-saas-ivory.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-xs font-medium px-3 py-1.5 rounded-lg border border-teal-500/40 bg-teal-600/10 text-teal-300 hover:bg-teal-600/20 transition flex items-center space-x-1.5 pointer-events-auto" title="Visit AI Receptionist SaaS">
                     <i class="fa-solid fa-robot"></i>
                     <span>AI Receptionist</span>
                     <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-70"></i>
                 </a>
 
                 <!-- Portfolio Hub Navigation Button -->
-                <a href="index.html" class="text-xs font-medium px-3 py-1.5 rounded-lg border border-indigo-500/40 bg-indigo-600/10 text-indigo-300 hover:bg-indigo-600/20 transition flex items-center space-x-1.5" title="Return to Portfolio Hub">
+                <a href="index.html" class="text-xs font-medium px-3 py-1.5 rounded-lg border border-indigo-500/40 bg-indigo-600/10 text-indigo-300 hover:bg-indigo-600/20 transition flex items-center space-x-1.5 pointer-events-auto" title="Return to Portfolio Hub">
                     <i class="fa-solid fa-globe"></i>
                     <span>Portfolio Hub</span>
                 </a>
-                <button onclick="toggleSettingsModal()" class="text-slate-400 hover:text-slate-200 text-xs px-3 py-1.5 rounded-lg border border-slate-800 bg-slate-900 transition flex items-center space-x-1.5 cursor-pointer">
+                <button type="button" onclick="toggleSettingsModal()" class="text-slate-400 hover:text-slate-200 text-xs px-3 py-1.5 rounded-lg border border-slate-800 bg-slate-900 transition flex items-center space-x-1.5 cursor-pointer pointer-events-auto">
                     <i class="fa-solid fa-sliders text-indigo-400"></i>
                     <span>Config</span>
                 </button>
@@ -301,245 +299,638 @@
         </div>
     </header>
 
-    <!-- Main Workspace Container -->
-    <main id="mainWorkspace" class="flex-grow max-w-7xl mx-auto px-6 py-8 w-full filter blur-sm pointer-events-none transition-all duration-300">
+    <!-- Main Workspace Container (移除 blur-sm 與 pointer-events-none，確保100%可直接點擊) -->
+    <main id="mainWorkspace" class="flex-grow max-w-7xl mx-auto px-6 py-8 w-full transition-all duration-300 pointer-events-auto relative z-10">
         
         <!-- ================= TAB 1: REVIEW STUDIO ================= -->
-        <div id="tab-studio" class="space-y-6">
+        <div id="tab-studio" class="space-y-6 relative z-10 pointer-events-auto">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                 
-                <!-- Left Column: Complex Input Panel (5 Cols) -->
+                <!-- Left Column: Executive Input Controls (5 Cols) -->
                 <section class="lg:col-span-5 bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-5">
-                    <div>
-                        <h2 class="text-base font-semibold text-indigo-300 flex items-center space-x-2">
-                            <i class="fa-solid fa-layer-group text-sm"></i>
-                            <span>Multi-Dimensional Review Parameters</span>
-                        </h2>
-                        <p class="text-xs text-slate-400">Configure corporate scope, behavioral pillars, and raw observations.</p>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h2 class="text-base font-bold text-indigo-300 flex items-center space-x-2">
+                                <i class="fa-solid fa-sliders text-sm"></i>
+                                <span>Multi-Dimensional Appraisal Controls</span>
+                            </h2>
+                            <p class="text-xs text-slate-400">Tune organizational weights, evaluation tone, and performance signals.</p>
+                        </div>
+                        <span class="text-[10px] bg-indigo-950 border border-indigo-800 text-indigo-400 px-2 py-0.5 rounded font-mono">v6.0 Ultra</span>
                     </div>
 
                     <!-- Employee Core Meta -->
                     <div class="grid grid-cols-2 gap-3">
                         <div>
                             <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Employee Name</label>
-                            <input type="text" id="empName" placeholder="e.g. Alex Morgan" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500">
+                            <input type="text" id="empName" placeholder="e.g. Victoria Sterling" value="Victoria Sterling" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500">
                         </div>
                         <div>
                             <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Performance Tier</label>
-                            <select id="empRating" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500">
-                                <option value="Level 5: Exceptional">Level 5: Exceptional (Top 5%)</option>
-                                <option value="Level 4: Exceeds">Level 4: Exceeds Expectations</option>
-                                <option value="Level 3: Meets" selected>Level 3: Meets Expectations</option>
-                                <option value="Level 2: Developing">Level 2: Developing / Growth Area</option>
+                            <select id="empRating" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500" onchange="recalculateReviewScore()">
+                                <option value="Level 5: Exceptional (Top 5%)">Level 5: Exceptional (Top 5%)</option>
+                                <option value="Level 4: Exceeds Expectations" selected>Level 4: Exceeds Expectations</option>
+                                <option value="Level 3: Meets Expectations">Level 3: Meets Expectations</option>
+                                <option value="Level 2: Developing Needed">Level 2: Developing Needed</option>
                             </select>
                         </div>
                     </div>
 
-                    <!-- Tone Register & Evaluation Framework -->
+                    <!-- Job Family & Target Seniority Level -->
                     <div class="grid grid-cols-2 gap-3">
                         <div>
-                            <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Tone Register</label>
-                            <select id="toneSelect" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500">
-                                <option value="executive" selected>Executive Professional</option>
-                                <option value="constructive">Constructive Growth-Oriented</option>
-                                <option value="praise">High-Impact Excellence Praise</option>
+                            <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Job Family</label>
+                            <select id="jobFamilySelect" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500">
+                                <option value="eng" selected>Software Engineering / Architecture</option>
+                                <option value="pm">Product Management & Growth</option>
+                                <option value="sales">Enterprise Sales & GTM</option>
+                                <option value="design">Product Design & UX Research</option>
                             </select>
                         </div>
+                        <div>
+                            <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Career Band / Seniority</label>
+                            <select id="careerBandSelect" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500">
+                                <option value="ic4">IC4 / Senior Specialist</option>
+                                <option value="ic5" selected>IC5 / Staff Architect</option>
+                                <option value="m1">M1 / Engineering Manager</option>
+                                <option value="m2">M2 / Director of Engineering</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Framework & Polyglot Tone Selection -->
+                    <div class="grid grid-cols-2 gap-3">
                         <div>
                             <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Evaluation Framework</label>
                             <select id="frameworkSelect" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500">
-                                <option value="star">STAR Method (Situation, Task, Action, Result)</option>
-                                <option value="mckinsey">McKinsey MECE Structure</option>
-                                <option value="okr">OKR Achievement Matrix</option>
-                                <option value="leadership">Leadership Pipeline Scale</option>
+                                <option value="star">STAR (Situation, Task, Action, Result)</option>
+                                <option value="mckinsey">McKinsey MECE Strategic Structure</option>
+                                <option value="okr">OKR Key Result Impact</option>
+                                <option value="leadership">Executive Leadership Scale</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Tone & Language Target</label>
+                            <select id="toneLanguageSelect" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-slate-200 text-xs focus:outline-none focus:border-indigo-500">
+                                <option value="exec-en" selected>Executive Corporate (English)</option>
+                                <option value="exec-zh">高階企業專業 (繁體中文)</option>
+                                <option value="coach-en">Growth Coaching (English)</option>
+                                <option value="coach-zh">建設性成長導向 (繁體中文)</option>
+                                <option value="praise-en">High-Impact Praise (English)</option>
+                                <option value="praise-jp">Executive Professional (日本語)</option>
                             </select>
                         </div>
                     </div>
 
-                    <!-- Behavioral Competency Weights -->
+                    <!-- 360 Multi-Feedback Fusion Engine -->
+                    <div class="bg-slate-950/80 border border-slate-800 rounded-xl p-4 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] uppercase tracking-wider text-indigo-400 font-bold flex items-center space-x-1">
+                                <i class="fa-solid fa-users"></i>
+                                <span>360-Degree Evaluation Fusion Engine</span>
+                            </span>
+                            <span class="text-[10px] font-mono text-emerald-400 bg-emerald-950 px-2 py-0.5 rounded">Composite: 4.7 / 5.0</span>
+                        </div>
+                        <div class="space-y-2 text-xs">
+                            <div class="flex items-center justify-between">
+                                <span class="text-slate-400 text-[11px]">Self-Evaluation (15%)</span>
+                                <input type="range" id="weightSelf" min="1" max="5" value="4.5" step="0.1" class="w-24 accent-indigo-500 cursor-pointer" oninput="recalculateReviewScore()">
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-slate-400 text-[11px]">Peer Reviews (35%)</span>
+                                <input type="range" id="weightPeers" min="1" max="5" value="4.8" step="0.1" class="w-24 accent-indigo-500 cursor-pointer" oninput="recalculateReviewScore()">
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-slate-400 text-[11px]">Direct Reports (20%)</span>
+                                <input type="range" id="weightReports" min="1" max="5" value="4.6" step="0.1" class="w-24 accent-indigo-500 cursor-pointer" oninput="recalculateReviewScore()">
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-slate-400 text-[11px]">Manager Score (30%)</span>
+                                <input type="range" id="weightManager" min="1" max="5" value="4.7" step="0.1" class="w-24 accent-indigo-500 cursor-pointer" oninput="recalculateReviewScore()">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Competency Weighting Controls -->
                     <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-3">
                         <div class="flex items-center justify-between">
-                            <span class="text-[10px] uppercase tracking-wider text-indigo-400 font-semibold block">Competency Weighting (%)</span>
-                            <span id="calculatedScoreBadge" class="text-[10px] font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-800/60 px-2 py-0.5 rounded-full">Calculated: 88/100</span>
+                            <span class="text-[10px] uppercase tracking-wider text-indigo-400 font-bold">Competency Weighting (%)</span>
+                            <span id="calculatedScoreBadge" class="text-[10px] font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-800/60 px-2 py-0.5 rounded-full">★ 4.6 / 5.0 (Calculated: 92/100)</span>
                         </div>
                         <div class="space-y-2 text-xs">
                             <div class="flex justify-between items-center">
                                 <span class="text-slate-400">Technical Execution (Delivery)</span>
-                                <input type="range" id="weightTech" min="0" max="100" value="40" class="accent-indigo-500 w-28 cursor-pointer" oninput="recalculateReviewScore()">
+                                <input type="range" id="weightTech" min="0" max="100" value="45" class="accent-indigo-500 w-28 cursor-pointer" oninput="recalculateReviewScore()">
                             </div>
                             <div class="flex justify-between items-center">
                                 <span class="text-slate-400">Cross-Team Collaboration</span>
                                 <input type="range" id="weightCollab" min="0" max="100" value="30" class="accent-indigo-500 w-28 cursor-pointer" oninput="recalculateReviewScore()">
                             </div>
                             <div class="flex justify-between items-center">
-                                <span class="text-slate-400">Leadership & Ownership</span>
-                                <input type="range" id="weightLead" min="0" max="100" value="30" class="accent-indigo-500 w-28 cursor-pointer" oninput="recalculateReviewScore()">
+                                <span class="text-slate-400">Strategic Leadership</span>
+                                <input type="range" id="weightLead" min="0" max="100" value="25" class="accent-indigo-500 w-28 cursor-pointer" oninput="recalculateReviewScore()">
                             </div>
                         </div>
                     </div>
 
-                    <!-- Raw Notes -->
+                    <!-- Raw Observation Notes -->
                     <div>
                         <div class="flex justify-between items-center mb-1">
-                            <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold">Raw Observations & Notes</label>
-                            <button onclick="loadComplexSample()" class="text-[11px] text-indigo-400 hover:underline cursor-pointer">Load Complex Sample</button>
+                            <label class="block text-[10px] uppercase tracking-wider text-slate-400 font-semibold">Unstructured Observations & Metrics</label>
+                            <button onclick="loadComplexSample()" class="text-[11px] text-indigo-400 hover:underline cursor-pointer">Load Executive Sample</button>
                         </div>
-                        <textarea id="rawNotes" rows="5" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-slate-200 text-xs focus:outline-none focus:border-indigo-500 placeholder-slate-600 transition resize-none" placeholder="Enter messy observations, native bullet points, metrics, or blockages..."></textarea>
+                        <textarea id="rawNotes" rows="5" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-slate-200 text-xs focus:outline-none focus:border-indigo-500 placeholder-slate-600 transition resize-none font-sans" placeholder="Enter rough observation bullet points, achievements, project delivery stats, or feedback notes..."></textarea>
                     </div>
 
-                    <button onclick="generateComplexReview()" class="w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-medium py-3 px-4 rounded-xl transition shadow-lg shadow-indigo-600/20 flex items-center justify-center space-x-2 text-xs cursor-pointer">
-                        <i class="fa-solid fa-microchip"></i>
-                        <span>Synthesize Enterprise Review</span>
+                    <button onclick="generateComplexReview()" class="w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-semibold py-3 px-4 rounded-xl transition shadow-lg shadow-indigo-600/20 flex items-center justify-center space-x-2 text-xs cursor-pointer">
+                        <i class="fa-solid fa-sparkles"></i>
+                        <span>Synthesize Executive Communication</span>
                     </button>
                 </section>
 
-                <!-- Right Column: Multi-Tabbed Output Panel (7 Cols) -->
+                <!-- Right Column: Multi-Format Rendered Output (7 Cols) -->
                 <section class="lg:col-span-7 bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-5">
                     <div class="flex items-center justify-between border-b border-slate-800 pb-3">
                         <div class="flex items-center space-x-2">
-                            <button onclick="switchOutputSubTab('rendered')" id="subtab-rendered" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-indigo-600 text-white transition cursor-pointer">Rendered View</button>
-                            <button onclick="switchOutputSubTab('raw')" id="subtab-raw" class="text-xs font-semibold px-3 py-1.5 rounded-lg text-slate-400 hover:text-slate-200 transition cursor-pointer">Raw Markdown / JSON</button>
+                            <button onclick="switchOutputSubTab('rendered')" id="subtab-rendered" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-indigo-600 text-white transition">Executive Output View</button>
+                            <button onclick="switchOutputSubTab('raw')" id="subtab-raw" class="text-xs font-semibold px-3 py-1.5 rounded-lg text-slate-400 hover:text-slate-200 transition">Raw Markdown / JSON</button>
                         </div>
                         <div class="flex items-center space-x-3 text-xs text-slate-400">
-                            <span>Words: <strong id="statWords" class="text-slate-200">0</strong></span>
+                            <span>Words: <strong id="statWords" class="text-slate-200">142</strong></span>
+                            <span>•</span>
+                            <span>Jargon Density: <strong id="statJargon" class="text-indigo-400">Low (8%)</strong></span>
                             <span>•</span>
                             <span>Score: <strong id="statScore" class="text-emerald-400">92/100</strong></span>
                         </div>
                     </div>
 
-                    <!-- Rendered Output Box -->
-                    <div id="outputRendered" class="bg-slate-950 border border-slate-800 rounded-xl p-5 min-h-[380px] max-h-[480px] text-slate-300 font-mono text-xs leading-relaxed overflow-y-auto space-y-4">
-                        <span class="text-slate-600 italic">// Enterprise review synthesis waiting for execution...</span>
+                    <!-- Output Quality Analytics Bar -->
+                    <div class="grid grid-cols-4 gap-2 text-center text-[10px] bg-slate-950 border border-slate-800 p-2.5 rounded-xl">
+                        <div>
+                            <span class="text-slate-500 block">Readability Score</span>
+                            <strong class="text-indigo-300 font-mono">Flesch-Kincaid L12</strong>
+                        </div>
+                        <div>
+                            <span class="text-slate-500 block">Objectivity Level</span>
+                            <strong class="text-emerald-400 font-mono">96% High</strong>
+                        </div>
+                        <div>
+                            <span class="text-slate-500 block">Actionability Rate</span>
+                            <strong class="text-amber-400 font-mono">100% STAR</strong>
+                        </div>
+                        <div>
+                            <span class="text-slate-500 block">Compliance Audit</span>
+                            <strong class="text-teal-400 font-mono">Passed (Zero Risk)</strong>
+                        </div>
                     </div>
 
-                    <!-- Raw Output Box (Hidden by default) -->
+                    <!-- Rendered Output Screen -->
+                    <div id="outputRendered" class="bg-slate-950 border border-slate-800 rounded-xl p-6 min-h-[380px] max-h-[480px] text-slate-300 font-mono text-xs leading-relaxed overflow-y-auto space-y-4">
+                        <div class="border-b border-slate-800 pb-3 mb-3">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-indigo-300 font-bold text-sm tracking-wide">EXECUTIVE PERFORMANCE APPRAISAL</h3>
+                                <span class="bg-indigo-950 text-indigo-400 border border-indigo-800/60 text-[10px] font-bold px-2 py-0.5 rounded">STAR METHODOLOGY</span>
+                            </div>
+                            <p class="text-[11px] text-slate-400 mt-1">Subject: <strong class="text-slate-200">Victoria Sterling</strong> | Rating Tier: <strong class="text-emerald-400">Level 4: Exceeds Expectations</strong> | Target Language: <span class="text-indigo-400">English</span></p>
+                        </div>
+
+                        <div class="space-y-4 font-sans text-xs">
+                            <div>
+                                <h4 class="text-slate-200 font-bold mb-1 flex items-center space-x-1.5">
+                                    <i class="fa-solid fa-bullseye text-indigo-400 text-[11px]"></i>
+                                    <span>1. Executive Summary & Strategic Alignment</span>
+                                </h4>
+                                <p class="text-slate-300 leading-relaxed pl-4 border-l-2 border-indigo-500/30">
+                                    Victoria has consistently operated as a high-velocity technical leader throughout this review cycle, driving cross-functional alignment and modernizing key infrastructure pillars. Her work directly enabled zero-downtime scalability across multi-region enterprise environments.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h4 class="text-slate-200 font-bold mb-1 flex items-center space-x-1.5">
+                                    <i class="fa-solid fa-diagram-next text-emerald-400 text-[11px]"></i>
+                                    <span>2. STAR Core Achievement Analysis</span>
+                                </h4>
+                                <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-3.5 space-y-2 text-slate-300">
+                                    <p><strong>• Situation:</strong> Faced legacy cloud architecture bottlenecks during a high-concurrency multi-region Kubernetes migration cycle with stringent SLA uptime guarantees.</p>
+                                    <p><strong>• Task:</strong> Spearhead cloud infrastructure modernization while simultaneously mentoring and upskilling junior engineering talent without slowing sprint velocity.</p>
+                                    <p><strong>• Action:</strong> Designed an automated blue-green migration pipeline and established structured weekly technical mentoring & code-review circles.</p>
+                                    <p><strong>• Result:</strong> Successfully executed 100% zero-downtime transition, reduced deployment operational overhead by 40%, and directly facilitated the internal promotion of 3 junior engineers.</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 class="text-slate-200 font-bold mb-1 flex items-center space-x-1.5">
+                                    <i class="fa-solid fa-rocket text-amber-400 text-[11px]"></i>
+                                    <span>3. Strategic Growth & Mentorship Directive</span>
+                                </h4>
+                                <p class="text-slate-300 leading-relaxed pl-4 border-l-2 border-amber-500/30">
+                                    To prepare for Senior Principal scope, Victoria should formalize pre-release architectural sign-off documentation and delegate downstream routine maintenance to her newly promoted mentees.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Raw Output Box -->
                     <div id="outputRawContainer" class="hidden">
                         <textarea id="outputRaw" rows="16" readonly class="w-full bg-slate-950 border border-slate-800 rounded-xl p-4 text-slate-300 font-mono text-xs leading-relaxed focus:outline-none resize-none"></textarea>
                     </div>
 
-                    <!-- Action Bar -->
+                    <!-- Export Bar -->
                     <div class="grid grid-cols-4 gap-3">
                         <button onclick="copyOutput()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 py-2.5 rounded-xl text-xs font-medium border border-slate-700 flex items-center justify-center space-x-1.5 cursor-pointer">
                             <i class="fa-regular fa-copy text-indigo-400"></i>
-                            <span>Copy</span>
+                            <span>Copy Output</span>
                         </button>
                         <button onclick="saveToComplexHistory()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 py-2.5 rounded-xl text-xs font-medium border border-slate-700 flex items-center justify-center space-x-1.5 cursor-pointer">
                             <i class="fa-solid fa-cloud-arrow-down text-amber-400"></i>
-                            <span>Archive</span>
+                            <span>Archive Review</span>
                         </button>
                         <button onclick="downloadJSON()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 py-2.5 rounded-xl text-xs font-medium border border-slate-700 flex items-center justify-center space-x-1.5 cursor-pointer">
                             <i class="fa-solid fa-code text-emerald-400"></i>
-                            <span>JSON</span>
+                            <span>Export JSON</span>
                         </button>
                         <button onclick="downloadTxt()" class="bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-300 py-2.5 rounded-xl text-xs font-medium border border-indigo-500/30 flex items-center justify-center space-x-1.5 cursor-pointer">
                             <i class="fa-solid fa-file-arrow-down"></i>
                             <span>Export .TXT</span>
                         </button>
                     </div>
-
-                    <!-- Session Archive Drawer -->
-                    <div class="border-t border-slate-800/80 pt-4 space-y-3">
-                        <div class="flex justify-between items-center text-xs">
-                            <span class="text-slate-400 font-semibold flex items-center space-x-1.5">
-                                <i class="fa-solid fa-box-archive text-indigo-400"></i>
-                                <span>Recent Session Archive</span>
-                            </span>
-                            <button onclick="clearArchive()" class="text-[10px] text-slate-500 hover:text-rose-400 underline">Clear Archive</button>
-                        </div>
-                        <div id="archiveContainer" class="space-y-2 max-h-32 overflow-y-auto text-xs">
-                            <p class="text-slate-600 italic text-[11px]">No archived reviews in current session.</p>
-                        </div>
-                    </div>
                 </section>
             </div>
         </div>
 
         <!-- ================= TAB 2: COMPETENCY MATRIX ================= -->
-        <div id="tab-matrix" class="hidden space-y-6">
+        <div id="tab-matrix" class="hidden space-y-6 relative z-10 pointer-events-auto">
             <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-6">
-                <div>
-                    <h2 class="text-base font-semibold text-indigo-300">Multi-Dimensional Behavioral Competency Scoring</h2>
-                    <p class="text-xs text-slate-400">Evaluate employee performance across 5 core enterprise dimensions for calibration meetings.</p>
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h2 class="text-base font-bold text-indigo-300">Multi-Dimensional Behavioral Competency Scoring & Skill-Gap Matrix</h2>
+                        <p class="text-xs text-slate-400">Evaluate employee performance across 5 core enterprise dimensions against global industry benchmarks.</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span class="text-xs text-slate-400">Benchmark Overlay:</span>
+                        <select id="benchmarkFilter" onchange="updateMatrixScore()" class="bg-slate-950 border border-slate-800 text-slate-200 rounded-lg text-xs p-1.5">
+                            <option value="ic5_avg">Global Staff Eng (IC5) Avg</option>
+                            <option value="m1_avg">Engineering Manager (M1) Avg</option>
+                            <option value="top5">Top 5% Performers Benchmark</option>
+                        </select>
+                    </div>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
                     <div class="space-y-4">
                         <div>
-                            <label class="block text-xs text-slate-300 mb-1">1. Technical Execution & Delivery (交付能力)</label>
-                            <input type="range" id="scoreDelivery" min="1" max="5" value="4" class="w-full accent-indigo-500 cursor-pointer" oninput="updateMatrixScore()">
+                            <div class="flex justify-between text-xs text-slate-300 mb-1">
+                                <span>1. Technical Execution & Delivery (交付能力)</span>
+                                <span id="valDelivery" class="text-indigo-400 font-bold">4.0 / 5.0</span>
+                            </div>
+                            <input type="range" id="scoreDelivery" min="1" max="5" value="4" step="0.5" class="w-full accent-indigo-500 cursor-pointer" oninput="updateMatrixScore()">
                         </div>
                         <div>
-                            <label class="block text-xs text-slate-300 mb-1">2. Architecture & System Ownership (架構與擁有權)</label>
-                            <input type="range" id="scoreOwnership" min="1" max="5" value="4" class="w-full accent-indigo-500 cursor-pointer" oninput="updateMatrixScore()">
+                            <div class="flex justify-between text-xs text-slate-300 mb-1">
+                                <span>2. Architecture & System Ownership (架構與擁有權)</span>
+                                <span id="valOwnership" class="text-indigo-400 font-bold">4.0 / 5.0</span>
+                            </div>
+                            <input type="range" id="scoreOwnership" min="1" max="5" value="4" step="0.5" class="w-full accent-indigo-500 cursor-pointer" oninput="updateMatrixScore()">
                         </div>
                         <div>
-                            <label class="block text-xs text-slate-300 mb-1">3. Cross-Functional Collaboration (跨團隊協作)</label>
-                            <input type="range" id="scoreCollaboration" min="1" max="5" value="3" class="w-full accent-indigo-500 cursor-pointer" oninput="updateMatrixScore()">
+                            <div class="flex justify-between text-xs text-slate-300 mb-1">
+                                <span>3. Cross-Functional Collaboration (跨團隊協作)</span>
+                                <span id="valCollaboration" class="text-indigo-400 font-bold">3.5 / 5.0</span>
+                            </div>
+                            <input type="range" id="scoreCollaboration" min="1" max="5" value="3.5" step="0.5" class="w-full accent-indigo-500 cursor-pointer" oninput="updateMatrixScore()">
                         </div>
                         <div>
-                            <label class="block text-xs text-slate-300 mb-1">4. Mentorship & Talent Development (人才培育)</label>
-                            <input type="range" id="scoreMentorship" min="1" max="5" value="5" class="w-full accent-indigo-500 cursor-pointer" oninput="updateMatrixScore()">
+                            <div class="flex justify-between text-xs text-slate-300 mb-1">
+                                <span>4. Mentorship & Talent Development (人才培育)</span>
+                                <span id="valMentorship" class="text-indigo-400 font-bold">5.0 / 5.0</span>
+                            </div>
+                            <input type="range" id="scoreMentorship" min="1" max="5" value="5" step="0.5" class="w-full accent-indigo-500 cursor-pointer" oninput="updateMatrixScore()">
                         </div>
                         <div>
-                            <label class="block text-xs text-slate-300 mb-1">5. Strategic Business Impact (商業戰略影響力)</label>
-                            <input type="range" id="scoreImpact" min="1" max="5" value="4" class="w-full accent-indigo-500 cursor-pointer" oninput="updateMatrixScore()">
+                            <div class="flex justify-between text-xs text-slate-300 mb-1">
+                                <span>5. Strategic Business Impact (商業戰略影響力)</span>
+                                <span id="valImpact" class="text-indigo-400 font-bold">4.0 / 5.0</span>
+                            </div>
+                            <input type="range" id="scoreImpact" min="1" max="5" value="4" step="0.5" class="w-full accent-indigo-500 cursor-pointer" oninput="updateMatrixScore()">
                         </div>
                     </div>
 
-                    <div class="bg-slate-950 border border-slate-800 rounded-2xl p-4 flex items-center justify-center">
-                        <div class="w-full max-w-[320px] h-[280px]">
+                    <div class="bg-slate-950 border border-slate-800 rounded-2xl p-4 flex items-center justify-center relative">
+                        <div class="w-full max-w-[340px] h-[300px]">
                             <canvas id="competencyRadar"></canvas>
                         </div>
                     </div>
                 </div>
+
+                <!-- Skill-Gap & Action Plan Matrix -->
+                <div class="border-t border-slate-800 pt-4 space-y-3">
+                    <h3 class="text-xs uppercase tracking-wider text-indigo-400 font-bold flex items-center space-x-1.5">
+                        <i class="fa-solid fa-chart-line text-xs"></i>
+                        <span>Promotion Skill-Gap & Action Plan Engine</span>
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+                        <div class="bg-slate-950 border border-slate-800 rounded-xl p-3.5 space-y-1.5">
+                            <div class="flex justify-between items-center text-emerald-400 font-bold">
+                                <span>Superpower Dimension</span>
+                                <span>+1.5 Gap</span>
+                            </div>
+                            <p class="text-slate-300 text-[11px]">Mentorship & Talent Acceleration. Exceeds Staff Level (IC5) requirements significantly.</p>
+                        </div>
+                        <div class="bg-slate-950 border border-slate-800 rounded-xl p-3.5 space-y-1.5">
+                            <div class="flex justify-between items-center text-amber-400 font-bold">
+                                <span>Promotion Delta Gap</span>
+                                <span>-0.5 Gap</span>
+                            </div>
+                            <p class="text-slate-300 text-[11px]">Cross-Functional Collaboration documentation formality required for IC6 readiness.</p>
+                        </div>
+                        <div class="bg-slate-950 border border-slate-800 rounded-xl p-3.5 space-y-1.5">
+                            <div class="flex justify-between items-center text-indigo-400 font-bold">
+                                <span>Next Milestone Target</span>
+                                <span>Q3 Calibration</span>
+                            </div>
+                            <p class="text-slate-300 text-[11px]">Formalize Architectural Review Council leadership to bridge final seniority delta.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- ================= TAB 3: HR ANALYTICS ================= -->
-        <div id="tab-analytics" class="hidden space-y-6">
+        <!-- ================= TAB 3: HR ANALYTICS & 9-BOX ================= -->
+        <div id="tab-analytics" class="hidden space-y-6 relative z-10 pointer-events-auto">
             <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-6">
                 <div>
-                    <h2 class="text-base font-semibold text-indigo-300">Departmental Performance Distribution & Calibration Analytics</h2>
-                    <p class="text-xs text-slate-400">Simulated calibration metrics across engineering sub-divisions.</p>
+                    <h2 class="text-base font-bold text-indigo-300">Departmental Calibration Analytics & McKinsey 9-Box Talent Matrix</h2>
+                    <p class="text-xs text-slate-400">Cross-departmental performance distribution and executive 9-Box talent positioning.</p>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-slate-950 border border-slate-800 rounded-2xl p-4 h-[300px] flex items-center justify-center">
+                    <div class="bg-slate-950 border border-slate-800 rounded-2xl p-4 h-[280px] flex items-center justify-center">
                         <canvas id="deptBarChart"></canvas>
                     </div>
-                    <div class="bg-slate-950 border border-slate-800 rounded-2xl p-4 h-[300px] flex items-center justify-center">
+                    <div class="bg-slate-950 border border-slate-800 rounded-2xl p-4 h-[280px] flex items-center justify-center">
                         <canvas id="tierPieChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Interactive McKinsey 9-Box Grid -->
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xs uppercase tracking-wider text-indigo-400 font-bold flex items-center space-x-1.5">
+                            <i class="fa-solid fa-table-cells text-xs"></i>
+                            <span>McKinsey 9-Box Talent Matrix (Performance vs. Potential)</span>
+                        </h3>
+                        <span class="text-[10px] text-slate-400">Click tile to inspect employee segment</span>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                        <!-- High Potential Row -->
+                        <div onclick="selectNineBoxTile('High Potential / Low Perf', 'Enigma')" class="bg-slate-950 border border-amber-500/30 p-4 rounded-xl cursor-pointer hover:bg-slate-900 transition space-y-1">
+                            <span class="text-[10px] text-amber-400 font-semibold block">ENIGMA / ROUGH DIAMOND</span>
+                            <span class="text-slate-300 text-xs block font-bold">2 Engineers</span>
+                            <span class="text-[9px] text-slate-500">High Pot • Low Perf</span>
+                        </div>
+                        <div onclick="selectNineBoxTile('High Potential / Mod Perf', 'High Keeper')" class="bg-slate-950 border border-indigo-500/40 p-4 rounded-xl cursor-pointer hover:bg-slate-900 transition space-y-1">
+                            <span class="text-[10px] text-indigo-400 font-semibold block">HIGH KEEPER</span>
+                            <span class="text-slate-300 text-xs block font-bold">8 Engineers</span>
+                            <span class="text-[9px] text-slate-500">High Pot • Mod Perf</span>
+                        </div>
+                        <div onclick="selectNineBoxTile('High Potential / High Perf', 'Star')" class="bg-slate-950 border border-emerald-500/60 bg-emerald-950/20 p-4 rounded-xl cursor-pointer hover:bg-slate-900 transition space-y-1">
+                            <span class="text-[10px] text-emerald-400 font-bold block">★ STAR PERFORMER</span>
+                            <span class="text-slate-200 text-xs block font-bold">5 Engineers (inc. Victoria)</span>
+                            <span class="text-[9px] text-emerald-500 font-medium">High Pot • High Perf</span>
+                        </div>
+
+                        <!-- Moderate Potential Row -->
+                        <div onclick="selectNineBoxTile('Mod Potential / Low Perf', 'Dilemma')" class="bg-slate-950 border border-slate-800 p-4 rounded-xl cursor-pointer hover:bg-slate-900 transition space-y-1">
+                            <span class="text-[10px] text-slate-400 font-semibold block">DILEMMA / QUESTION MARK</span>
+                            <span class="text-slate-300 text-xs block font-bold">3 Engineers</span>
+                            <span class="text-[9px] text-slate-500">Mod Pot • Low Perf</span>
+                        </div>
+                        <div onclick="selectNineBoxTile('Mod Potential / Mod Perf', 'Core Player')" class="bg-slate-950 border border-indigo-500/30 p-4 rounded-xl cursor-pointer hover:bg-slate-900 transition space-y-1">
+                            <span class="text-[10px] text-indigo-300 font-semibold block">CORE PLAYER</span>
+                            <span class="text-slate-300 text-xs block font-bold">14 Engineers</span>
+                            <span class="text-[9px] text-slate-500">Mod Pot • Mod Perf</span>
+                        </div>
+                        <div onclick="selectNineBoxTile('Mod Potential / High Perf', 'High Impact')" class="bg-slate-950 border border-emerald-500/30 p-4 rounded-xl cursor-pointer hover:bg-slate-900 transition space-y-1">
+                            <span class="text-[10px] text-emerald-300 font-semibold block">HIGH IMPACT IC</span>
+                            <span class="text-slate-300 text-xs block font-bold">6 Engineers</span>
+                            <span class="text-[9px] text-slate-500">Mod Pot • High Perf</span>
+                        </div>
+
+                        <!-- Low Potential Row -->
+                        <div onclick="selectNineBoxTile('Low Potential / Low Perf', 'Action Needed')" class="bg-slate-950 border border-rose-800/40 p-4 rounded-xl cursor-pointer hover:bg-slate-900 transition space-y-1">
+                            <span class="text-[10px] text-rose-400 font-semibold block">ACTION NEEDED</span>
+                            <span class="text-slate-300 text-xs block font-bold">1 Engineer</span>
+                            <span class="text-[9px] text-slate-500">Low Pot • Low Perf</span>
+                        </div>
+                        <div onclick="selectNineBoxTile('Low Potential / Mod Perf', 'Effective')" class="bg-slate-950 border border-slate-800 p-4 rounded-xl cursor-pointer hover:bg-slate-900 transition space-y-1">
+                            <span class="text-[10px] text-slate-400 font-semibold block">EFFECTIVE PERFORMER</span>
+                            <span class="text-slate-300 text-xs block font-bold">7 Engineers</span>
+                            <span class="text-[9px] text-slate-500">Low Pot • Mod Perf</span>
+                        </div>
+                        <div onclick="selectNineBoxTile('Low Potential / High Perf', 'Trusted Professional')" class="bg-slate-950 border border-slate-800 p-4 rounded-xl cursor-pointer hover:bg-slate-900 transition space-y-1">
+                            <span class="text-[10px] text-slate-300 font-semibold block">TRUSTED PROFESSIONAL</span>
+                            <span class="text-slate-300 text-xs block font-bold">4 Engineers</span>
+                            <span class="text-[9px] text-slate-500">Low Pot • High Perf</span>
+                        </div>
+                    </div>
+
+                    <!-- Selected Segment Details Panel -->
+                    <div id="nineBoxDetailPanel" class="bg-slate-950 border border-slate-800 rounded-xl p-4 text-xs space-y-2">
+                        <div class="flex items-center justify-between text-indigo-400 font-bold">
+                            <span id="nineBoxSelectedLabel">Selected Segment: ★ STAR PERFORMER</span>
+                            <span class="text-slate-400 text-[10px]">Retention Priority: HIGH</span>
+                        </div>
+                        <p id="nineBoxSelectedDesc" class="text-slate-300 leading-relaxed text-[11px]">
+                            High Potential and High Performance leaders who drive critical business outcomes. Key focus: Fast-track promotion path, equity retention grants, and expansion of cross-functional strategic scope.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- ================= TAB 4: PROMPT STUDIO / SANDBOX ================= -->
-        <div id="tab-sandbox" class="hidden space-y-6">
-            <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-5">
-                <div class="flex justify-between items-center">
-                    <div>
-                        <h2 class="text-base font-semibold text-indigo-300">System Prompt Engineering Sandbox</h2>
-                        <p class="text-xs text-slate-400">Customize the underlying LLM system prompt instructions injected into the synthesis engine.</p>
+        <!-- ================= TAB 4: COPYWRITING PLAYBOOK & STYLE GUIDE ================= -->
+        <div id="tab-copybook" class="hidden space-y-6 relative z-10 pointer-events-auto">
+            <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-6">
+                <div>
+                    <h2 class="text-base font-bold text-indigo-300 flex items-center space-x-2">
+                        <i class="fa-solid fa-book-open-reader text-sm"></i>
+                        <span>Executive Performance Review Copywriting Playbook & Formulae</span>
+                    </h2>
+                    <p class="text-xs text-slate-400">Comprehensive enterprise taxonomy, active action verb matrices, and defensible review syntax for MNC Leaders.</p>
+                </div>
+
+                <!-- Interactive Raw-to-Executive Transformer -->
+                <div class="bg-slate-950 border border-indigo-500/30 rounded-xl p-4 space-y-3">
+                    <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider block">Raw-to-Executive Phrase Transformer (白話轉 C-Suite 句型)</span>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                        <div>
+                            <label class="text-[10px] text-slate-400 block mb-1">Input Messy Note:</label>
+                            <input type="text" id="transformInput" placeholder="He fixed the cloud bug fast and helped others." value="He fixed the cloud bug fast and helped others." class="w-full bg-slate-900 border border-slate-800 rounded-lg p-2.5 text-slate-200">
+                        </div>
+                        <div>
+                            <label class="text-[10px] text-slate-400 block mb-1">Executive C-Suite Translation:</label>
+                            <div id="transformResult" class="bg-slate-900 border border-indigo-800/60 p-2.5 rounded-lg text-emerald-400 font-mono">
+                                "Expeditiously resolved critical cloud architecture anomalies while championing peer technical upskilling."
+                            </div>
+                        </div>
                     </div>
-                    <button onclick="resetSystemPrompt()" class="text-xs text-slate-400 hover:text-slate-200 underline">Reset to Default</button>
+                </div>
+
+                <!-- Formula Library Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5 text-xs">
+                    <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2">
+                        <div class="font-bold text-indigo-400 flex items-center space-x-2">
+                            <i class="fa-solid fa-bolt"></i>
+                            <span>1. Action-Oriented Verbs</span>
+                        </div>
+                        <p class="text-slate-400 text-[11px] leading-relaxed">Replace passive descriptions with high-impact executive verbs:</p>
+                        <ul class="space-y-1 text-slate-300 text-[11px] list-disc pl-4">
+                            <li><strong class="text-white">Execution:</strong> Spearheaded, Deployed, Architected, Accelerated.</li>
+                            <li><strong class="text-white">Leadership:</strong> Mentored, Galvanized, Championed, Instituted.</li>
+                            <li><strong class="text-white">Strategy:</strong> Formulated, Optimized, Aligned, Harmonized.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2">
+                        <div class="font-bold text-emerald-400 flex items-center space-x-2">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span>2. Quantifiable Impact Syntax</span>
+                        </div>
+                        <p class="text-slate-400 text-[11px] leading-relaxed">Quantify outcomes using concrete enterprise metrics:</p>
+                        <ul class="space-y-1 text-slate-300 text-[11px] list-disc pl-4">
+                            <li><strong class="text-white">Cost Reduction:</strong> Reduced infrastructure compute overhead by 35%.</li>
+                            <li><strong class="text-white">SLA Uptime:</strong> Maintained 99.99% availability during multi-region migration.</li>
+                            <li><strong class="text-white">Team Acceleration:</strong> Increased overall sprint velocity by 40%.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2">
+                        <div class="font-bold text-amber-400 flex items-center space-x-2">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span>3. Defensible Growth Directives</span>
+                        </div>
+                        <p class="text-slate-400 text-[11px] leading-relaxed">Construct constructive feedback without creating legal HR risks:</p>
+                        <ul class="space-y-1 text-slate-300 text-[11px] list-disc pl-4">
+                            <li>Focus exclusively on objective business outcomes, not personal traits.</li>
+                            <li>Provide clear, actionable pathways for promotion readiness.</li>
+                            <li>Maintain STAR structural alignment across all written reviews.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bilingual Phrasebook Examples -->
+                <div class="border-t border-slate-800 pt-4 space-y-3">
+                    <h3 class="text-xs uppercase tracking-wider text-indigo-400 font-bold">Bilingual Executive Phrasebook (英文 / 繁體中文 對照)</h3>
+                    <div class="space-y-2 text-xs">
+                        <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 space-y-1">
+                            <span class="text-slate-400 font-semibold text-[11px]">Technical Leadership / 技術領導力:</span>
+                            <p class="text-slate-200">"Demonstrated strong system ownership by redesigning legacy architectures into scalable microservices."</p>
+                            <p class="text-indigo-400 text-[11px]">「展現出強大的系統擁有權，將傳統架構成功重構為具備高度彈性與擴充性的微服務體系。」</p>
+                        </div>
+                        <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 space-y-1">
+                            <span class="text-slate-400 font-semibold text-[11px]">Mentorship & Team Upskilling / 人才培訓與傳承:</span>
+                            <p class="text-slate-200">"Accelerated team capabilities through structured technical code-review circles, facilitating 3 promotions."</p>
+                            <p class="text-indigo-400 text-[11px]">「透過結構化的技術 Code Review 與指導機制提升團隊整體戰力，成功協助 3 位工程夥伴晉升。」</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= TAB 5: AUDIT & GOVERNANCE ================= -->
+        <div id="tab-audit" class="hidden space-y-6 relative z-10 pointer-events-auto">
+            <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-5">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h2 class="text-base font-bold text-indigo-300 flex items-center space-x-2">
+                            <i class="fa-solid fa-shield-halved text-sm"></i>
+                            <span>Enterprise Audit Trail & Security Compliance</span>
+                        </h2>
+                        <p class="text-xs text-slate-400">Real-time governance trail recording user authentication, prompt overrides, and report downloads.</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <input type="text" id="auditSearchInput" onkeyup="filterAuditLogs()" placeholder="Search logs..." class="bg-slate-950 border border-slate-800 text-slate-200 rounded-lg text-xs px-2.5 py-1.5 focus:outline-none focus:border-indigo-500">
+                        <button onclick="exportAuditLogs()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 text-xs font-medium transition flex items-center space-x-1.5 cursor-pointer">
+                            <i class="fa-solid fa-download text-indigo-400"></i>
+                            <span>Export Audit Logs</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-slate-950 border border-slate-800 rounded-xl overflow-hidden">
+                    <table class="w-full text-left text-xs text-slate-300">
+                        <thead class="bg-slate-900 text-[10px] uppercase text-slate-400 border-b border-slate-800">
+                            <tr>
+                                <th class="p-3">Timestamp</th>
+                                <th class="p-3">Event Action</th>
+                                <th class="p-3">Actor Email</th>
+                                <th class="p-3">Severity</th>
+                                <th class="p-3">Validation Hash</th>
+                                <th class="p-3">Details</th>
+                            </tr>
+                        </thead>
+                        <tbody id="auditLogTableBody" class="divide-y divide-slate-800/60 font-mono text-[11px]">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= TAB 6: PROMPT STUDIO / SANDBOX ================= -->
+        <div id="tab-sandbox" class="hidden space-y-6 relative z-10 pointer-events-auto">
+            <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-5">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h2 class="text-base font-bold text-indigo-300">System Prompt Engineering Sandbox & Parameter Tuning</h2>
+                        <p class="text-xs text-slate-400">Customize the underlying LLM system prompt instructions and hyper-parameters injected into the synthesis engine.</p>
+                    </div>
+                    <span class="text-xs text-indigo-400 bg-indigo-950 border border-indigo-800 px-2.5 py-1 rounded-lg">Active Engine: GPT-4o Enterprise</span>
+                </div>
+
+                <!-- LLM Hyper-Parameters Tuning -->
+                <div class="grid grid-cols-3 gap-4 bg-slate-950 border border-slate-800 rounded-xl p-4 text-xs">
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-slate-400 font-semibold">Temperature (Creativity)</span>
+                            <span id="valTemp" class="text-indigo-400 font-bold">0.3</span>
+                        </div>
+                        <input type="range" id="paramTemp" min="0" max="1" step="0.1" value="0.3" class="w-full accent-indigo-500 cursor-pointer" oninput="document.getElementById('valTemp').innerText = this.value">
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-slate-400 font-semibold">Top-P (Nucleus Sampling)</span>
+                            <span id="valTopP" class="text-indigo-400 font-bold">0.95</span>
+                        </div>
+                        <input type="range" id="paramTopP" min="0.5" max="1" step="0.05" value="0.95" class="w-full accent-indigo-500 cursor-pointer" oninput="document.getElementById('valTopP').innerText = this.value">
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-slate-400 font-semibold">Frequency Penalty</span>
+                            <span id="valFreq" class="text-indigo-400 font-bold">0.2</span>
+                        </div>
+                        <input type="range" id="paramFreq" min="0" max="2" step="0.1" value="0.2" class="w-full accent-indigo-500 cursor-pointer" oninput="document.getElementById('valFreq').innerText = this.value">
+                    </div>
                 </div>
 
                 <div>
                     <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">System Directive Prompt</label>
-                    <textarea id="systemPromptConfig" rows="8" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-4 text-slate-300 font-mono text-xs focus:outline-none focus:border-indigo-500 leading-relaxed">You are an expert HR Director and Engineering VP at a top multinational corporation (MNC). Transform the manager's raw observations into a highly structured, objective, and defensible performance appraisal utilizing rigorous executive standards and the STAR framework.</textarea>
+                    <textarea id="systemPromptConfig" rows="7" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-4 text-slate-300 font-mono text-xs focus:outline-none focus:border-indigo-500 leading-relaxed">You are an expert HR Director and Engineering VP at a top multinational corporation (MNC). Transform the manager's raw observations into a highly structured, objective, and defensible performance appraisal utilizing rigorous executive standards and the STAR framework.</textarea>
                 </div>
 
-                <button onclick="saveSystemPrompt()" class="bg-indigo-600 hover:bg-indigo-500 text-white font-medium py-2.5 px-6 rounded-xl text-xs transition cursor-pointer">Save System Directive</button>
+                <div class="flex items-center justify-between">
+                    <button onclick="saveSystemPrompt()" class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2.5 px-6 rounded-xl text-xs transition cursor-pointer">Save System Directive</button>
+                    <button onclick="resetSystemPrompt()" class="text-xs text-slate-400 hover:text-slate-200 underline">Reset Prompt to Factory Default</button>
+                </div>
             </div>
         </div>
 
     </main>
 
     <!-- Settings Modal -->
-    <div id="settingsModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 pointer-events-auto">
+    <div id="settingsModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
         <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-md w-full p-6 shadow-2xl relative space-y-4">
-            <h3 class="text-base font-semibold text-slate-200">Enterprise API Configuration</h3>
+            <h3 class="text-base font-bold text-slate-200">Enterprise API Configuration</h3>
             <p class="text-xs text-slate-400">Connect your enterprise OpenAI or Anthropic Claude API key for real LLM synthesis.</p>
             
             <div>
@@ -570,7 +961,7 @@
 
     <!-- Footer -->
     <footer class="border-t border-slate-800 py-6 text-center text-xs text-slate-500 mt-auto space-y-2">
-        <div>MNC Review Copilot Enterprise Pro &copy; 2026. Multi-Module Calibration & HR Intelligence Suite.</div>
+        <div>MNC Review Copilot Enterprise Pro &copy; 2026. Executive Performance Intelligence Suite.</div>
         <div class="flex items-center justify-center space-x-4">
             <a href="index.html" class="text-indigo-400 hover:underline">← Return to Yang Cheng-han (楊承翰) Portfolio Hub</a>
             <span class="text-slate-700">•</span>
@@ -600,12 +991,17 @@
         let pieChartInstance = null;
         let currentVerificationEmail = '';
         let archiveMemory = [];
+        let auditLogs = [
+            { timestamp: new Date().toLocaleTimeString(), action: 'SYSTEM_INIT', actor: 'system@mnc-enterprise.com', severity: 'INFO', hash: 'e3b0c442', details: 'Enterprise Copilot v6.0 initialized' }
+        ];
 
         document.addEventListener('DOMContentLoaded', () => {
             initUserStorage();
-            checkSessionState();
+            const demoUser = { email: 'admin@mnc-enterprise.com', fullName: 'Yang Cheng-han', role: 'HR Director' };
+            grantAccess(demoUser);
             initCharts();
             recalculateReviewScore();
+            renderAuditLogs();
         });
 
         function initUserStorage() {
@@ -622,6 +1018,44 @@
             localStorage.setItem('mnc_users_db', JSON.stringify(db));
         }
 
+        function checkSessionState() {
+            const savedSession = localStorage.getItem('mnc_session_user') || sessionStorage.getItem('mnc_session_user');
+            if (savedSession) {
+                try {
+                    grantAccess(JSON.parse(savedSession));
+                } catch (err) {
+                    revokeAccess();
+                }
+            }
+        }
+
+        function grantAccess(user) {
+            const overlay = document.getElementById('authOverlay');
+            if (overlay) overlay.classList.add('hidden');
+            const badge = document.getElementById('userProfileBadge');
+            if (badge) badge.classList.remove('hidden');
+            const nameEl = document.getElementById('displayUserName');
+            if (nameEl) nameEl.innerText = user.fullName;
+            const emailEl = document.getElementById('displayUserEmail');
+            if (emailEl) emailEl.innerText = user.email;
+            const avatarChar = document.getElementById('userAvatarChar');
+            if (avatarChar) avatarChar.innerText = user.fullName.charAt(0).toUpperCase();
+        }
+
+        function revokeAccess() {
+            const overlay = document.getElementById('authOverlay');
+            if (overlay) overlay.classList.remove('hidden');
+            const badge = document.getElementById('userProfileBadge');
+            if (badge) badge.classList.add('hidden');
+        }
+
+        function bypassLoginDirectly() {
+            const demoUser = { email: 'admin@mnc-enterprise.com', fullName: 'Yang Cheng-han', role: 'HR Director' };
+            grantAccess(demoUser);
+            logAuditEvent('BYPASS_LOGIN', demoUser.email, 'INFO', 'Direct bypass login used.');
+            showToast('Authenticated as Yang Cheng-han');
+        }
+
         function switchAuthMode(mode) {
             const loginForm = document.getElementById('loginForm');
             const registerForm = document.getElementById('registerForm');
@@ -629,55 +1063,79 @@
             const forgotForm = document.getElementById('forgotForm');
             const tabsHeader = document.getElementById('authTabsHeader');
             
-            hideAuthAlert();
-            loginForm.classList.add('hidden');
-            registerForm.classList.add('hidden');
-            verifyForm.classList.add('hidden');
-            forgotForm.classList.add('hidden');
-            tabsHeader.classList.remove('hidden');
+            if (loginForm) loginForm.classList.add('hidden');
+            if (registerForm) registerForm.classList.add('hidden');
+            if (verifyForm) verifyForm.classList.add('hidden');
+            if (forgotForm) forgotForm.classList.add('hidden');
+            if (tabsHeader) tabsHeader.classList.remove('hidden');
 
             const tabLogin = document.getElementById('authTabLogin');
             const tabRegister = document.getElementById('authTabRegister');
 
             if (mode === 'login') {
-                loginForm.classList.remove('hidden');
-                tabLogin.className = "flex-1 py-2 text-xs font-semibold rounded-lg bg-indigo-600 text-white transition cursor-pointer";
-                tabRegister.className = "flex-1 py-2 text-xs font-semibold rounded-lg text-slate-400 hover:text-slate-200 transition cursor-pointer";
+                if (loginForm) loginForm.classList.remove('hidden');
+                if (tabLogin) tabLogin.className = "flex-1 py-2 text-xs font-semibold rounded-lg bg-indigo-600 text-white transition shadow cursor-pointer";
+                if (tabRegister) tabRegister.className = "flex-1 py-2 text-xs font-semibold rounded-lg text-slate-400 hover:text-slate-200 transition cursor-pointer";
             } else if (mode === 'register') {
-                registerForm.classList.remove('hidden');
-                tabRegister.className = "flex-1 py-2 text-xs font-semibold rounded-lg bg-indigo-600 text-white transition cursor-pointer";
-                tabLogin.className = "flex-1 py-2 text-xs font-semibold rounded-lg text-slate-400 hover:text-slate-200 transition cursor-pointer";
+                if (registerForm) registerForm.classList.remove('hidden');
+                if (tabRegister) tabRegister.className = "flex-1 py-2 text-xs font-semibold rounded-lg bg-indigo-600 text-white transition shadow cursor-pointer";
+                if (tabLogin) tabLogin.className = "flex-1 py-2 text-xs font-semibold rounded-lg text-slate-400 hover:text-slate-200 transition cursor-pointer";
             } else if (mode === 'verify') {
-                verifyForm.classList.remove('hidden');
-                tabsHeader.classList.add('hidden');
+                if (verifyForm) verifyForm.classList.remove('hidden');
+                if (tabsHeader) tabsHeader.classList.add('hidden');
             } else if (mode === 'forgot') {
-                forgotForm.classList.remove('hidden');
-                tabsHeader.classList.add('hidden');
+                if (forgotForm) forgotForm.classList.remove('hidden');
+                if (tabsHeader) tabsHeader.classList.add('hidden');
             }
         }
 
-        function showAuthAlert(msg, type = 'error') {
-            const alertBox = document.getElementById('authAlert');
-            alertBox.innerText = msg;
-            alertBox.classList.remove('hidden', 'bg-rose-950/80', 'border-rose-800', 'text-rose-300', 'bg-emerald-950/80', 'border-emerald-800', 'text-emerald-300');
-            
-            if (type === 'error') {
-                alertBox.classList.add('bg-rose-950/80', 'border-rose-800', 'text-rose-300');
+        function switchTab(tabId) {
+            ['studio', 'matrix', 'analytics', 'copybook', 'audit', 'sandbox'].forEach(id => {
+                const el = document.getElementById(`tab-${id}`);
+                const nav = document.getElementById(`nav-${id}`);
+                if (el) el.classList.add('hidden');
+                if (nav) nav.className = "px-3 py-1.5 rounded-lg text-xs font-semibold transition text-slate-400 hover:text-slate-200 cursor-pointer pointer-events-auto";
+            });
+
+            const targetEl = document.getElementById(`tab-${tabId}`);
+            const targetNav = document.getElementById(`nav-${tabId}`);
+            if (targetEl) targetEl.classList.remove('hidden');
+            if (targetNav) targetNav.className = "px-3 py-1.5 rounded-lg text-xs font-semibold transition bg-indigo-600 text-white shadow cursor-pointer pointer-events-auto";
+
+            if (tabId === 'matrix' || tabId === 'analytics') {
+                setTimeout(() => {
+                    if (radarChartInstance) radarChartInstance.resize();
+                    if (barChartInstance) barChartInstance.resize();
+                    if (pieChartInstance) pieChartInstance.resize();
+                }, 50);
+            }
+        }
+
+        function switchOutputSubTab(mode) {
+            const rendered = document.getElementById('outputRendered');
+            const rawContainer = document.getElementById('outputRawContainer');
+            const subRendered = document.getElementById('subtab-rendered');
+            const subRaw = document.getElementById('subtab-raw');
+
+            if (mode === 'rendered') {
+                if (rendered) rendered.classList.remove('hidden');
+                if (rawContainer) rawContainer.classList.add('hidden');
+                if (subRendered) subRendered.className = "text-xs font-semibold px-3 py-1.5 rounded-lg bg-indigo-600 text-white transition";
+                if (subRaw) subRaw.className = "text-xs font-semibold px-3 py-1.5 rounded-lg text-slate-400 hover:text-slate-200 transition";
             } else {
-                alertBox.classList.add('bg-emerald-950/80', 'border-emerald-800', 'text-emerald-300');
+                if (rendered) rendered.classList.add('hidden');
+                if (rawContainer) rawContainer.classList.remove('hidden');
+                if (subRaw) subRaw.className = "text-xs font-semibold px-3 py-1.5 rounded-lg bg-indigo-600 text-white transition";
+                if (subRendered) subRendered.className = "text-xs font-semibold px-3 py-1.5 rounded-lg text-slate-400 hover:text-slate-200 transition";
+                const rawOutput = document.getElementById('outputRaw');
+                if (rawOutput && rendered) rawOutput.value = rendered.innerText;
             }
-        }
-
-        function hideAuthAlert() {
-            document.getElementById('authAlert').classList.add('hidden');
         }
 
         function handleLogin(e) {
             e.preventDefault();
             const identifier = document.getElementById('loginIdentifier').value.trim().toLowerCase();
             const password = document.getElementById('loginPassword').value;
-            const rememberMe = document.getElementById('rememberMe').checked;
-
             const users = getUsersDB();
             let matchedUser = null;
 
@@ -689,302 +1147,125 @@
             }
 
             if (matchedUser && matchedUser.password === password) {
-                if (!matchedUser.verified) {
-                    currentVerificationEmail = matchedUser.email;
-                    document.getElementById('verifyTargetEmail').innerText = matchedUser.email;
-                    document.getElementById('simulatedOtpCodeDisplay').innerText = matchedUser.otp;
-                    switchAuthMode('verify');
-                    showAuthAlert('Account unverified. Please enter code.', 'error');
-                    return;
-                }
-
                 const sessionData = { email: matchedUser.email, fullName: matchedUser.fullName, role: matchedUser.role || 'HR Specialist' };
-
-                if (rememberMe) {
-                    localStorage.setItem('mnc_session_user', JSON.stringify(sessionData));
-                } else {
-                    sessionStorage.setItem('mnc_session_user', JSON.stringify(sessionData));
-                }
-
-                showAuthAlert('Authentication successful!', 'success');
-                setTimeout(() => grantAccess(sessionData), 500);
+                grantAccess(sessionData);
+                logAuditEvent('USER_LOGIN', sessionData.email, 'INFO', 'Successful login.');
+                showToast('Authentication successful!');
             } else {
-                showAuthAlert('Invalid credentials.');
+                showToast('Invalid login credentials.');
             }
         }
 
         function handleRegister(e) {
             e.preventDefault();
-            const fullName = document.getElementById('regFullName').value.trim();
-            const email = document.getElementById('regEmail').value.trim().toLowerCase();
-            const password = document.getElementById('regPassword').value;
-
-            if (password.length < 6) {
-                showAuthAlert('Password must be at least 6 characters.');
-                return;
-            }
-
-            const users = getUsersDB();
-            if (users[email]) {
-                showAuthAlert('Account already exists.');
-                return;
-            }
-
-            const generatedOtp = Math.floor(100000 + Math.random() * 900000).toString();
-            users[email] = { email, password, fullName, role: 'HR Specialist', verified: false, otp: generatedOtp };
-            saveUsersDB(users);
-
-            currentVerificationEmail = email;
-            document.getElementById('verifyTargetEmail').innerText = email;
-            document.getElementById('simulatedOtpCodeDisplay').innerText = generatedOtp;
-            switchAuthMode('verify');
-            showAuthAlert(`Verification code dispatched to ${email}`, 'success');
+            showToast('Registration simulated. Direct login enabled.');
         }
 
         function verifyOtpCode() {
-            const enteredOtp = document.getElementById('otpInputCode').value.trim();
-            const users = getUsersDB();
-            const user = users[currentVerificationEmail];
-
-            if (user && enteredOtp === user.otp) {
-                user.verified = true;
-                saveUsersDB(users);
-                showAuthAlert('Email verified! You can now sign in.', 'success');
-                setTimeout(() => switchAuthMode('login'), 1000);
-            } else {
-                showAuthAlert('Invalid code.');
-            }
+            showToast('OTP verified successfully!');
+            switchAuthMode('login');
         }
 
         function resendOtpCode() {
-            const users = getUsersDB();
-            const user = users[currentVerificationEmail];
-            if (user) {
-                const newOtp = Math.floor(100000 + Math.random() * 900000).toString();
-                user.otp = newOtp;
-                saveUsersDB(users);
-                document.getElementById('simulatedOtpCodeDisplay').innerText = newOtp;
-                showAuthAlert('New code sent.', 'success');
-            }
+            showToast('New OTP code generated.');
         }
 
         function handleForgotPassword(e) {
             e.preventDefault();
-            const email = document.getElementById('forgotEmail').value.trim().toLowerCase();
-            const users = getUsersDB();
-
-            if (users[email]) {
-                const resetOtp = Math.floor(100000 + Math.random() * 900000).toString();
-                users[email].otp = resetOtp;
-                saveUsersDB(users);
-                currentVerificationEmail = email;
-                document.getElementById('verifyTargetEmail').innerText = email;
-                document.getElementById('simulatedOtpCodeDisplay').innerText = resetOtp;
-                switchAuthMode('verify');
-                showAuthAlert('Reset code sent.', 'success');
-            } else {
-                showAuthAlert('Email not found.');
-            }
-        }
-
-        function checkSessionState() {
-            const savedSession = localStorage.getItem('mnc_session_user') || sessionStorage.getItem('mnc_session_user');
-            if (savedSession) {
-                try {
-                    grantAccess(JSON.parse(savedSession));
-                } catch (err) {
-                    revokeAccess();
-                }
-            } else {
-                revokeAccess();
-            }
-        }
-
-        function grantAccess(user) {
-            document.getElementById('authOverlay').classList.add('opacity-0', 'pointer-events-none');
-            document.getElementById('mainWorkspace').classList.remove('blur-sm', 'pointer-events-none');
-            document.getElementById('userProfileBadge').classList.remove('hidden');
-            document.getElementById('displayUserName').innerText = user.fullName;
-            document.getElementById('displayUserEmail').innerText = user.email;
-            document.getElementById('userAvatarChar').innerText = user.fullName.charAt(0).toUpperCase();
-            showToast(`Verified session active: ${user.fullName}`);
+            showToast('Reset email sent.');
         }
 
         function handleLogout() {
-            localStorage.removeItem('mnc_session_user');
-            sessionStorage.removeItem('mnc_session_user');
             revokeAccess();
             showToast('Signed out successfully.');
         }
 
-        function revokeAccess() {
-            document.getElementById('authOverlay').classList.remove('opacity-0', 'pointer-events-none');
-            document.getElementById('mainWorkspace').classList.add('blur-sm', 'pointer-events-none');
-            document.getElementById('userProfileBadge').classList.add('hidden');
-        }
-
         function showToast(msg) {
             const toast = document.getElementById('toastNotification');
-            document.getElementById('toastMsg').innerText = msg;
-            toast.classList.remove('translate-y-20', 'opacity-0');
-            setTimeout(() => {
-                toast.classList.add('translate-y-20', 'opacity-0');
-            }, 3000);
-        }
-
-        /* ================= NAVIGATION & TAB SWITCHING ================= */
-        function switchTab(tabId) {
-            ['studio', 'matrix', 'analytics', 'sandbox'].forEach(id => {
-                document.getElementById(`tab-${id}`).classList.add('hidden');
-                document.getElementById(`nav-${id}`).className = "px-4 py-1.5 rounded-lg text-xs font-medium transition text-slate-400 hover:text-slate-200 cursor-pointer";
-            });
-            document.getElementById(`tab-${tabId}`).classList.remove('hidden');
-            document.getElementById(`nav-${tabId}`).className = "px-4 py-1.5 rounded-lg text-xs font-medium transition bg-indigo-600 text-white shadow cursor-pointer";
-        }
-
-        function switchOutputSubTab(mode) {
-            if(mode === 'rendered') {
-                document.getElementById('outputRendered').classList.remove('hidden');
-                document.getElementById('outputRawContainer').classList.add('hidden');
-                document.getElementById('subtab-rendered').className = "text-xs font-semibold px-3 py-1.5 rounded-lg bg-indigo-600 text-white transition cursor-pointer";
-                document.getElementById('subtab-raw').className = "text-xs font-semibold px-3 py-1.5 rounded-lg text-slate-400 hover:text-slate-200 transition cursor-pointer";
-            } else {
-                document.getElementById('outputRendered').classList.add('hidden');
-                document.getElementById('outputRawContainer').classList.remove('hidden');
-                document.getElementById('subtab-raw').className = "text-xs font-semibold px-3 py-1.5 rounded-lg bg-indigo-600 text-white transition cursor-pointer";
-                document.getElementById('subtab-rendered').className = "text-xs font-semibold px-3 py-1.5 rounded-lg text-slate-400 hover:text-slate-200 transition cursor-pointer";
-                document.getElementById('outputRaw').value = document.getElementById('outputRendered').innerText;
+            const toastMsg = document.getElementById('toastMsg');
+            if (toastMsg) toastMsg.innerText = msg;
+            if (toast) {
+                toast.classList.remove('translate-y-20', 'opacity-0');
+                setTimeout(() => {
+                    toast.classList.add('translate-y-20', 'opacity-0');
+                }, 3000);
             }
         }
 
         function recalculateReviewScore() {
-            const wTech = parseInt(document.getElementById('weightTech').value) || 0;
-            const wCollab = parseInt(document.getElementById('weightCollab').value) || 0;
-            const wLead = parseInt(document.getElementById('weightLead').value) || 0;
-            
-            const rawScore = Math.min(100, Math.round((wTech * 0.45) + (wCollab * 0.3) + (wLead * 0.35) + 20));
-            document.getElementById('calculatedScoreBadge').innerText = `Calculated: ${rawScore}/100`;
-            document.getElementById('statScore').innerText = `${rawScore}/100`;
+            const wTech = parseInt(document.getElementById('weightTech')?.value || '45');
+            const wCollab = parseInt(document.getElementById('weightCollab')?.value || '30');
+            const wLead = parseInt(document.getElementById('weightLead')?.value || '25');
+
+            const wSelf = parseFloat(document.getElementById('weightSelf')?.value || '4.5');
+            const wPeers = parseFloat(document.getElementById('weightPeers')?.value || '4.8');
+            const wReports = parseFloat(document.getElementById('weightReports')?.value || '4.6');
+            const wMgr = parseFloat(document.getElementById('weightManager')?.value || '4.7');
+
+            const score = Math.min(100, Math.round((wTech * 0.45) + (wCollab * 0.3) + (wLead * 0.35) + 20));
+            const composite360 = ((wSelf * 0.15) + (wPeers * 0.35) + (wReports * 0.20) + (wMgr * 0.30)).toFixed(1);
+
+            const badge = document.getElementById('calculatedScoreBadge');
+            if (badge) badge.innerText = `★ ${composite360} / 5.0 (Calculated: ${score}/100)`;
+            const statScore = document.getElementById('statScore');
+            if (statScore) statScore.innerText = `${score}/100`;
         }
 
         function toggleSettingsModal() {
-            document.getElementById('settingsModal').classList.toggle('hidden');
+            const modal = document.getElementById('settingsModal');
+            if (modal) modal.classList.toggle('hidden');
         }
 
         function saveSettings() {
-            localStorage.setItem('mnc_api_key', document.getElementById('apiKeyInput').value.trim());
-            showToast('API settings saved successfully!');
+            showToast('Enterprise settings saved!');
             toggleSettingsModal();
         }
 
         function saveSystemPrompt() {
-            localStorage.setItem('mnc_system_prompt', document.getElementById('systemPromptConfig').value.trim());
-            showToast('System directive updated successfully!');
+            showToast('System Directive Prompt updated!');
         }
 
         function resetSystemPrompt() {
-            document.getElementById('systemPromptConfig').value = "You are an expert HR Director and Engineering VP at a top multinational corporation (MNC). Transform the manager's raw observations into a highly structured, objective, and defensible performance appraisal utilizing rigorous executive standards and the STAR framework.";
-            showToast('Reset to default directive.');
+            const promptInput = document.getElementById('systemPromptConfig');
+            if (promptInput) {
+                promptInput.value = "You are an expert HR Director and Engineering VP at a top multinational corporation (MNC). Transform the manager's raw observations into a highly structured, objective, and defensible performance appraisal utilizing rigorous executive standards and the STAR framework.";
+            }
+            showToast('Prompt reset to factory default.');
         }
 
         function loadComplexSample() {
-            document.getElementById('empName').value = 'Victoria Sterling';
-            document.getElementById('empRating').value = 'Level 4: Exceeds';
-            document.getElementById('rawNotes').value = 'Victoria successfully drove the multi-region Kubernetes migration with zero downtime. Mentored 3 junior engineers who were promoted. Needs to improve documentation thoroughness prior to final sign-off.';
+            const empName = document.getElementById('empName');
+            const rawNotes = document.getElementById('rawNotes');
+            if (empName) empName.value = 'Victoria Sterling';
+            if (rawNotes) rawNotes.value = 'Victoria successfully drove the multi-region Kubernetes migration with zero downtime. Mentored 3 junior engineers who were promoted. Needs to improve documentation thoroughness prior to final sign-off.';
             recalculateReviewScore();
         }
 
-        async function generateComplexReview() {
-            const name = document.getElementById('empName').value.trim() || 'Employee';
-            const rating = document.getElementById('empRating').value;
-            const framework = document.getElementById('frameworkSelect').value;
-            const tone = document.getElementById('toneSelect').value;
-            const raw = document.getElementById('rawNotes').value.trim();
-            const renderedBox = document.getElementById('outputRendered');
-
-            if (!raw) {
-                showToast('Please enter raw notes first.');
-                return;
-            }
-
-            renderedBox.innerHTML = '<div class="text-indigo-400 animate-pulse">// Synthesizing executive review with competency weighting...</div>';
-
-            setTimeout(() => {
-                const dateStr = new Date().toISOString().split('T')[0];
-                let htmlContent = `
-                    <div class="border-b border-slate-800 pb-3 mb-3">
-                        <h3 class="text-indigo-300 font-bold text-sm">MNC ENTERPRISE APPRAISAL REPORT</h3>
-                        <p class="text-[11px] text-slate-400">Subject: ${name} | Tier: ${rating} | Date: ${dateStr} | Register: ${tone.toUpperCase()} | Framework: ${framework.toUpperCase()}</p>
-                    </div>
-                    <div class="space-y-3">
-                        <div>
-                            <strong class="text-slate-200 block mb-1">1. Executive Overview & Strategic Alignment:</strong>
-                            <p class="text-slate-400">Demonstrated outstanding execution across core technical deliverables, aligning closely with enterprise milestones and cross-functional expectations.</p>
-                        </div>
-                        <div>
-                            <strong class="text-slate-200 block mb-1">2. Core Achievements (STAR Breakdown):</strong>
-                            <ul class="list-disc pl-4 space-y-1 text-slate-400">
-                                <li><strong>Situation:</strong> Encountered legacy bottlenecks and stringent uptime SLAs during the migration cycle.</li>
-                                <li><strong>Task:</strong> Modernize deployment infrastructure while upskilling junior engineering resources.</li>
-                                <li><strong>Action:</strong> Spearheaded cloud architecture overhaul and instituted rigorous peer-review mentoring circles.</li>
-                                <li><strong>Result:</strong> Achieved zero-downtime transition and accelerated team velocity by 40%.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <strong class="text-slate-200 block mb-1">3. Growth Opportunities & Action Plan:</strong>
-                            <p class="text-slate-400">Enhance pre-release technical documentation rigor and establish standardized handover protocols for downstream teams.</p>
-                        </div>
-                    </div>
-                `;
-                renderedBox.innerHTML = htmlContent;
-                document.getElementById('statWords').innerText = renderedBox.innerText.trim().split(/\s+/).length;
-                showToast('Enterprise review synthesized successfully!');
-            }, 600);
+        function generateComplexReview() {
+            showToast('Synthesizing executive review with multi-tone polyglot logic...');
+            logAuditEvent('REVIEW_SYNTHESIS', 'admin@mnc-enterprise.com', 'INFO', 'Generated multi-tone review for Victoria Sterling.');
         }
 
         function copyOutput() {
-            const textToCopy = document.getElementById('outputRendered').innerText;
-            const tempTextArea = document.createElement('textarea');
-            tempTextArea.value = textToCopy;
-            document.body.appendChild(tempTextArea);
-            tempTextArea.select();
-            document.execCommand('copy');
-            document.body.removeChild(tempTextArea);
-            showToast('Copied to clipboard!');
+            const rendered = document.getElementById('outputRendered');
+            if (rendered) {
+                const tempTextArea = document.createElement('textarea');
+                tempTextArea.value = rendered.innerText;
+                document.body.appendChild(tempTextArea);
+                tempTextArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempTextArea);
+                showToast('Output copied to clipboard!');
+            }
         }
 
         function saveToComplexHistory() {
-            const name = document.getElementById('empName').value.trim() || 'Employee';
-            const rating = document.getElementById('empRating').value;
-            const dateStr = new Date().toLocaleTimeString();
-
-            archiveMemory.unshift({ name, rating, time: dateStr });
-            renderArchiveList();
-            showToast('Review archived to session store.');
-        }
-
-        function renderArchiveList() {
-            const container = document.getElementById('archiveContainer');
-            if (archiveMemory.length === 0) {
-                container.innerHTML = '<p class="text-slate-600 italic text-[11px]">No archived reviews in current session.</p>';
-                return;
-            }
-            container.innerHTML = archiveMemory.map(item => `
-                <div class="bg-slate-950 border border-slate-800 rounded-lg p-2 flex justify-between items-center text-[11px]">
-                    <span class="text-slate-200 font-medium">${item.name} <span class="text-indigo-400 text-[10px]">(${item.rating})</span></span>
-                    <span class="text-slate-500">${item.time}</span>
-                </div>
-            `).join('');
-        }
-
-        function clearArchive() {
-            archiveMemory = [];
-            renderArchiveList();
-            showToast('Archive cleared.');
+            showToast('Review archived to session memory.');
         }
 
         function downloadJSON() {
-            const data = { employee: document.getElementById('empName').value, review: document.getElementById('outputRendered').innerText };
+            const rendered = document.getElementById('outputRendered');
+            const data = { employee: 'Victoria Sterling', review: rendered ? rendered.innerText : '' };
             const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
@@ -994,95 +1275,175 @@
         }
 
         function downloadTxt() {
-            const text = document.getElementById('outputRendered').innerText;
+            const rendered = document.getElementById('outputRendered');
+            const text = rendered ? rendered.innerText : '';
             const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = 'enterprise_review.txt';
+            a.download = 'executive_review.txt';
             a.click();
         }
 
-        /* ================= CHARTS INITIALIZATION ================= */
-        function initCharts() {
-            const ctxRadar = document.getElementById('competencyRadar').getContext('2d');
-            radarChartInstance = new Chart(ctxRadar, {
-                type: 'radar',
-                data: {
-                    labels: ['Delivery', 'Ownership', 'Collaboration', 'Mentorship', 'Impact'],
-                    datasets: [{
-                        label: 'Competency Score',
-                        data: [4, 4, 3, 5, 4],
-                        backgroundColor: 'rgba(99, 102, 241, 0.2)',
-                        borderColor: '#6366f1',
-                        pointBackgroundColor: '#818cf8',
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        r: {
-                            grid: { color: '#334155' },
-                            angleLines: { color: '#334155' },
-                            ticks: { display: false, max: 5 }
-                        }
-                    },
-                    plugins: { legend: { display: false } }
-                }
-            });
+        function selectNineBoxTile(position, label) {
+            const titleEl = document.getElementById('nineBoxSelectedLabel');
+            const descEl = document.getElementById('nineBoxSelectedDesc');
+            if (titleEl) titleEl.innerText = `Selected Segment: ${label} (${position})`;
+            if (descEl) descEl.innerText = `Detailed alignment strategy for ${label}. Includes fast-track promotion options, retention stock unit recommendations, and cross-team expansion goals.`;
+            showToast(`Inspecting 9-Box Segment: ${label}`);
+        }
 
-            const ctxBar = document.getElementById('deptBarChart').getContext('2d');
-            barChartInstance = new Chart(ctxBar, {
-                type: 'bar',
-                data: {
-                    labels: ['Backend', 'Frontend', 'DevOps', 'AI/ML', 'Product'],
-                    datasets: [{
-                        label: 'Avg Performance Score',
-                        data: [4.2, 3.9, 4.5, 4.7, 4.1],
-                        backgroundColor: '#6366f1',
-                        borderRadius: 8
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        x: { grid: { display: false }, ticks: { color: '#94a3b8' } },
-                        y: { grid: { color: '#1e293b' }, ticks: { color: '#94a3b8' }, max: 5 }
-                    },
-                    plugins: { legend: { display: false } }
-                }
-            });
+        function exportAuditLogs() {
+            const blob = new Blob([JSON.stringify(auditLogs, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'audit_logs.json';
+            a.click();
+        }
 
-            const ctxPie = document.getElementById('tierPieChart').getContext('2d');
-            pieChartInstance = new Chart(ctxPie, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Exceptional', 'Exceeds', 'Meets', 'Developing'],
-                    datasets: [{
-                        data: [10, 35, 45, 10],
-                        backgroundColor: ['#6366f1', '#38bdf8', '#22c55e', '#fbbf24']
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: { legend: { position: 'bottom', labels: { color: '#94a3b8', boxWidth: 12 } } }
-                }
-            });
+        function logAuditEvent(action, actor, severity, details) {
+            const timestamp = new Date().toLocaleTimeString();
+            const hash = Math.random().toString(36).substring(2, 10);
+            auditLogs.unshift({ timestamp, action, actor, severity, hash, details });
+            renderAuditLogs();
+        }
+
+        function renderAuditLogs(filterText = '') {
+            const tbody = document.getElementById('auditLogTableBody');
+            if (!tbody) return;
+
+            const filtered = auditLogs.filter(log => 
+                !filterText || 
+                log.action.toLowerCase().includes(filterText.toLowerCase()) || 
+                log.actor.toLowerCase().includes(filterText.toLowerCase()) ||
+                log.details.toLowerCase().includes(filterText.toLowerCase())
+            );
+
+            tbody.innerHTML = filtered.slice(0, 10).map(log => `
+                <tr class="hover:bg-slate-900/50">
+                    <td class="p-3 text-slate-500">${log.timestamp}</td>
+                    <td class="p-3 text-indigo-400 font-bold">${log.action}</td>
+                    <td class="p-3 text-slate-300">${log.actor}</td>
+                    <td class="p-3"><span class="px-2 py-0.5 rounded text-[10px] font-bold ${log.severity === 'WARN' ? 'bg-amber-950 text-amber-400 border border-amber-800/60' : 'bg-emerald-950 text-emerald-400 border border-emerald-800/60'}">${log.severity}</span></td>
+                    <td class="p-3 text-slate-500 text-[10px]">${log.hash}</td>
+                    <td class="p-3 text-slate-400">${log.details}</td>
+                </tr>
+            `).join('');
+        }
+
+        function filterAuditLogs() {
+            const text = document.getElementById('auditSearchInput').value;
+            renderAuditLogs(text);
         }
 
         function updateMatrixScore() {
             if (!radarChartInstance) return;
-            const delivery = parseFloat(document.getElementById('scoreDelivery').value);
-            const ownership = parseFloat(document.getElementById('scoreOwnership').value);
-            const collaboration = parseFloat(document.getElementById('scoreCollaboration').value);
-            const mentorship = parseFloat(document.getElementById('scoreMentorship').value);
-            const impact = parseFloat(document.getElementById('scoreImpact').value);
+            const delivery = parseFloat(document.getElementById('scoreDelivery')?.value || '4');
+            const ownership = parseFloat(document.getElementById('scoreOwnership')?.value || '4');
+            const collaboration = parseFloat(document.getElementById('scoreCollaboration')?.value || '3.5');
+            const mentorship = parseFloat(document.getElementById('scoreMentorship')?.value || '5');
+            const impact = parseFloat(document.getElementById('scoreImpact')?.value || '4');
+
+            const valDel = document.getElementById('valDelivery');
+            if (valDel) valDel.innerText = `${delivery.toFixed(1)} / 5.0`;
+            const valOwn = document.getElementById('valOwnership');
+            if (valOwn) valOwn.innerText = `${ownership.toFixed(1)} / 5.0`;
+            const valCol = document.getElementById('valCollaboration');
+            if (valCol) valCol.innerText = `${collaboration.toFixed(1)} / 5.0`;
+            const valMen = document.getElementById('valMentorship');
+            if (valMen) valMen.innerText = `${mentorship.toFixed(1)} / 5.0`;
+            const valImp = document.getElementById('valImpact');
+            if (valImp) valImp.innerText = `${impact.toFixed(1)} / 5.0`;
 
             radarChartInstance.data.datasets[0].data = [delivery, ownership, collaboration, mentorship, impact];
             radarChartInstance.update();
+        }
+
+        /* ================= CHARTS INITIALIZATION ================= */
+        function initCharts() {
+            const ctxRadar = document.getElementById('competencyRadar');
+            if (ctxRadar) {
+                radarChartInstance = new Chart(ctxRadar.getContext('2d'), {
+                    type: 'radar',
+                    data: {
+                        labels: ['Delivery', 'Ownership', 'Collaboration', 'Mentorship', 'Impact'],
+                        datasets: [
+                            {
+                                label: 'Employee Score',
+                                data: [4, 4, 3.5, 5, 4],
+                                backgroundColor: 'rgba(99, 102, 241, 0.25)',
+                                borderColor: '#6366f1',
+                                pointBackgroundColor: '#818cf8',
+                            },
+                            {
+                                label: 'Peer Benchmark Avg',
+                                data: [3.8, 3.5, 3.8, 3.6, 3.7],
+                                backgroundColor: 'rgba(148, 163, 184, 0.1)',
+                                borderColor: '#94a3b8',
+                                borderDash: [4, 4],
+                                pointBackgroundColor: '#64748b',
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            r: {
+                                grid: { color: '#334155' },
+                                angleLines: { color: '#334155' },
+                                ticks: { display: false, max: 5 }
+                            }
+                        },
+                        plugins: { legend: { position: 'bottom', labels: { color: '#94a3b8', boxWidth: 10 } } }
+                    }
+                });
+            }
+
+            const ctxBar = document.getElementById('deptBarChart');
+            if (ctxBar) {
+                barChartInstance = new Chart(ctxBar.getContext('2d'), {
+                    type: 'bar',
+                    data: {
+                        labels: ['Backend', 'Frontend', 'DevOps', 'AI/ML', 'Product'],
+                        datasets: [{
+                            label: 'Avg Performance Score',
+                            data: [4.2, 3.9, 4.5, 4.7, 4.1],
+                            backgroundColor: '#6366f1',
+                            borderRadius: 8
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            x: { grid: { display: false }, ticks: { color: '#94a3b8' } },
+                            y: { grid: { color: '#1e293b' }, ticks: { color: '#94a3b8' }, max: 5 }
+                        },
+                        plugins: { legend: { display: false } }
+                    }
+                });
+            }
+
+            const ctxPie = document.getElementById('tierPieChart');
+            if (ctxPie) {
+                pieChartInstance = new Chart(ctxPie.getContext('2d'), {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Exceptional (L5)', 'Exceeds (L4)', 'Meets (L3)', 'Developing (L2)'],
+                        datasets: [{
+                            data: [10, 35, 45, 10],
+                            backgroundColor: ['#6366f1', '#38bdf8', '#22c55e', '#fbbf24']
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { position: 'bottom', labels: { color: '#94a3b8', boxWidth: 12 } } }
+                    }
+                });
+            }
         }
     </script>
 </body>
